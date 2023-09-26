@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    # IMPORTANT - Please verify your build commands
+    preBuild:
+        commands:
+            - cd sky-radar
+            - npm install
+    build:
+      commands:
+        - npm run dev
+  artifacts:
+    # IMPORTANT - Please verify your build output directory
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
