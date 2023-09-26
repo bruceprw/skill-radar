@@ -2,6 +2,7 @@ import React from "react";
 import LogoFull from "../assets/logo-full.jsx";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import UserIcon from '../components/UserIcon';
 
 const Header = () => {
   return (
@@ -12,8 +13,8 @@ const Header = () => {
         </Box>
       </Grid>
       <Grid item xs={9}>
-        <Box>
-          TOP BAR HERE
+        <Box sx={{display: 'flex', justifyContent: 'end', alignSelf: 'center', padding: '1rem'}}>
+          <UserIcon />
         </Box>
       </Grid>
     </Grid>
