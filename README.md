@@ -1,5 +1,4 @@
-# Defence Hackathon 2023 Repository
-The repository for your technical solution to the problem you have chosen.
+# Defence Hackathon 2023 - Team 9 Repository - Skill Radar
 
 # Need another repository?
 Reach out to the Appivate Tech Team!
