@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -154,3 +155,13 @@ function ResponsiveAppBar() {
   );
 }
 export default ResponsiveAppBar;
+=======
+const Header = () => {
+
+    return (
+        <p>Header Here</p>
+    )
+}
+
+export default Header;
+>>>>>>> 32bdc30860b27ecc3ff64c7c3ffe0cc9bf05b53b
