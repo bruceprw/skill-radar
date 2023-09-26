@@ -1,1 +1,0 @@
-## Defence Hackathon Team 9 - SkillsRadar
