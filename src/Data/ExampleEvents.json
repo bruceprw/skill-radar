@@ -1,0 +1,52 @@
+{
+    "Programming":[
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "Expand your network, meet and talk to like minded people and share your stories and experiences.",
+            "logo": "/assets/logos/NetworkingImage.png",
+            "title": "Networking evening",
+            "attendance": "30"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "Learn to code, from 0 to hero in Python, C#, Java and much much more",
+            "logo": "/assets/logos/ProgrammingIcon.png",
+            "title": "Programming Event",
+            "attendance": "10"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "Fly a drone, new commers welcome.",
+            "logo": "/assets/logos/DroneIcon.png",
+            "title": "Drone Flying",
+            "attendance": "2"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "Geek out with a newly established gaming group for dungeons and dragons.",
+            "logo": "/assets/logos/DungeonsAndDragonsIcon.png",
+            "title": "Dungeons And Dragons",
+            "attendance": "4"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "Show off your skills and imporve your techniques at our e-sports comepetition, with a cash prize!!.",
+            "logo": "/assets/logos/E-SportsIcon.png",
+            "title": "E sports competition",
+            "attendance": "20"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f24",
+            "createdAt": "27/03/2019",
+            "description": "zero to here web development group, come and get involved.",
+            "logo": "/assets/logos/WebDevIcon.png",
+            "title": "web-development for beginners",
+            "attendance": "3"
+        }
+    ]
+}

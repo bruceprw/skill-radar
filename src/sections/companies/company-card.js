@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
-import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
+//import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
 import ClockIcon from '@heroicons/react/24/solid/ClockIcon';
+//import Person from '@heroicons/react/24/solid/user-circle';
+
 import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography } from '@mui/material';
 
 export const CompanyCard = (props) => {
@@ -75,17 +77,18 @@ export const CompanyCard = (props) => {
           spacing={1}
         >
           <SvgIcon
-            color="action"
-            fontSize="small"
+          color="action"
+          fontSize="small"
+            
           >
-            <ArrowDownOnSquareIcon />
+         
           </SvgIcon>
           <Typography
             color="text.secondary"
             display="inline"
             variant="body2"
           >
-            {company.downloads} Downloads
+            {company.attendance} Attendies
           </Typography>
         </Stack>
       </Stack>
