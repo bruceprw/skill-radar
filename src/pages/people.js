@@ -7,8 +7,8 @@ import PlusIcon from '@heroicons/react/24/solid/PlusIcon';
 import { Box, Button, Container, Stack, SvgIcon, Typography } from '@mui/material';
 import { useSelection } from 'src/hooks/use-selection';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
-import { CustomersTable } from 'src/sections/customer/customers-table';
-import { CustomersSearch } from 'src/sections/customer/customers-search';
+import { PeopleTable } from 'src/sections/people/people-table';
+import { PeopleSearch } from 'src/sections/people/people-search';
 import { applyPagination } from 'src/utils/apply-pagination';
 
 const now = new Date();
@@ -199,7 +199,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Customers | Devias Kit
+          People
         </title>
       </Head>
       <Box
@@ -218,7 +218,7 @@ const Page = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
-                  Customers
+                  People
                 </Typography>
                 <Stack
                   alignItems="center"
@@ -260,8 +260,8 @@ const Page = () => {
                 </Button>
               </div>
             </Stack>
-            <CustomersSearch />
-            <CustomersTable
+            <PeopleSearch />
+            <PeopleTable
               count={data.length}
               items={customers}
               onDeselectAll={customersSelection.handleDeselectAll}
