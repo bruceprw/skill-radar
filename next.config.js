@@ -7,4 +7,5 @@ module.exports = {
     appSlug: 'SR',
     appVer: '1.0',
   },
+
 };
