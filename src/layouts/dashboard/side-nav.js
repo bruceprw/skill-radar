@@ -19,6 +19,9 @@ import { items } from './config';
 import { SideNavItem } from './side-nav-item';
 
 export const SideNav = (props) => {
+
+  let appName = process.env.appName;
+
   const { open, onClose } = props;
   const pathname = usePathname();
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
@@ -71,7 +74,7 @@ export const SideNav = (props) => {
                 color="inherit"
                 variant="subtitle1"
               >
-                {process.env.appName}
+                {appName}
               </Typography>
             </div>
           </Box>
