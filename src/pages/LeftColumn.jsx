@@ -1,9 +1,10 @@
 import React from 'react';
+import Menu from '../components/Menu';
 
 const LeftColumn = () => {
 
   return (
-    <p>Left</p>
+    <Menu />
   )
 
 }

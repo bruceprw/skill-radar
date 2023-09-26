@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={3} >
-        <Box sx={{display: 'flex', justifyContent: 'center'}}>
+        <Box sx={{display: 'flex', justifyContent: 'center', padding: '1rem'}}>
           <LogoFull />
         </Box>
       </Grid>
       <Grid item xs={9}>
         <Box>
-          Menu
+          TOP BAR HERE
         </Box>
       </Grid>
     </Grid>
