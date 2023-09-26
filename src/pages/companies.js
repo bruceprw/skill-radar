@@ -45,7 +45,7 @@ const Page = () => (
               <Typography variant="h4">
                 <h2>Events</h2>
                 
-                <p>Find Events We Think You'll Like!!</p>
+                <p>Find Events We Think You&apos;ll Like!!</p>
                 
               </Typography>
               <Stack

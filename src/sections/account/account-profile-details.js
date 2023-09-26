@@ -44,17 +44,17 @@ export const AccountProfileDetails = () => {
       console.log('Use effect called');
       
 
-      
-      // fetch(`${process.env.APIUrl}listUsers`, {
-      //   method: "GET",
-      // })
-      //   .then(function (res) {
-      //     return res.json();
-      //   })
-      //   .then(function (data) {
-      //     //console.log(JSON.parse(data.body));
-      //     console.log('DATA', data);
-      //   });
+
+      fetch(`${process.env.APIUrl}listUsers`, {
+        method: "GET",
+      })
+        .then(function (res) {
+          return res.json();
+        })
+        .then(function (data) {
+          //console.log(JSON.parse(data.body));
+          console.log('DATA', data);
+        });
 
     }, [])
 
