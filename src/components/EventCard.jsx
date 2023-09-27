@@ -39,12 +39,10 @@ const statusIcon = {
   PianoIcon: <PianoIcon />,
   FlightIcon: <FlightIcon />,
   DirectionsCarIcon: <DirectionsCarIcon />,
-  DirectionsCarIcon: <ArchitectureIcon />,
   CameraAltIcon: <CameraAltIcon />,
   SportsEsportsIcon: <SportsEsportsIcon />,
   TerminalIcon: <TerminalIcon />,
   Groups2Icon: <Groups2Icon />,
-  CameraAltIcon: <CameraAltIcon />,
   CameraAltIcon: <CameraAltIcon />,
   CasinoIcon :<CasinoIcon />
   // other icons based on your status
