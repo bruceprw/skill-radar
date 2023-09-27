@@ -4,6 +4,7 @@ import Dashboard from "./Dashboard";
 import Overview from "./Overview";
 import People from "./People";
 import Profile from "./Profile";
+import SkillSearch from "./SkillSearch"
 
 const MainContent = () => {
 
@@ -13,6 +14,7 @@ const MainContent = () => {
       <Route path={'/overview'} element={<Overview />} />
       <Route path={'/people'} element={<People />} />
       <Route path={'/profile'} element={<Profile />} />
+      <Route path={'/skill-search'} element={<SkillSearch />}/>
     </Routes>
   )
 

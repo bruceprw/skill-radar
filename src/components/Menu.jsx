@@ -32,6 +32,11 @@ export default function Menu() {
       text: "People",
       icon: "GroupsIcon",
     },
+    {
+      to: "/skill-search",
+      text: "Skills Search",
+      icon: "GroupsIcon",
+    },
   ];
 
   const statusIcon = {
