@@ -58,6 +58,7 @@ const Header = (props) => {
               justifySelf: "end",
               alignSelf: "center",
               padding: "1rem",
+              display: { xs: "none", md: "block" },
             }}
           >
             <UserIcon onLogout={props.onLogout} />

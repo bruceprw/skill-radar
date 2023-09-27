@@ -13,11 +13,15 @@ import LeaderboardIcon from "@mui/icons-material/Leaderboard";
 import ForumIcon from "@mui/icons-material/Forum";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
-import MenuData from '../data/Menu.json'
+import MenuData from "../data/Menu.json";
+import UserIcon from "../components/UserIcon";
+import PersonIcon from "@mui/icons-material/Person";
 
-export default function Menu() {
+export default function Menu(props) {
   const location = useLocation();
   const menuItems = MenuData.Menu;
+
+  console.log(props)
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
@@ -64,6 +68,37 @@ export default function Menu() {
             })}
           </List>
         </nav>
+        <Box
+          sx={{
+            display: { xs: "block", md: "none" },
+          }}
+        >
+          <Link to={"/profile"}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Chip
+                    icon={<PersonIcon />}
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: "#ccc",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      paddingLeft: "0",
+                    }}
+                  />
+                </ListItemIcon>
+                <ListItemText primary="Profile" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <ListItem disablePadding onClick={props.onLogout}>
+            <ListItemButton>
+              <ListItemText primary="Logout" />
+            </ListItemButton>
+          </ListItem>
+        </Box>
       </Box>
     </>
   );

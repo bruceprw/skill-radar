@@ -29,6 +29,7 @@ function App() {
   };
 
   const logoutHandler = () => {
+    console.log('LOGOUT')
     localStorage.removeItem("isLoggedIn");
     setLoggedIn(false);
   };
@@ -52,7 +53,7 @@ function App() {
               sx={{ height: "100vh", display: { xs: "none", md: "block" } }}
             >
               <Box>
-                <LeftColumn />
+                <LeftColumn onLogout={logoutHandler}/>
               </Box>
             </Grid>
             <Grid
