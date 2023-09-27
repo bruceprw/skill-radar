@@ -53,10 +53,10 @@ export default function Menu() {
         <nav aria-label="main mailbox folders">
           <List>
             {menuItems.map((item) => {
-              let selected = 0;
+              let selected = false;
 
               if (location.pathname == item.to) {
-                selected = 1;
+                selected = true;
               }
 
               return (

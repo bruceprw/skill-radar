@@ -5,6 +5,7 @@ import CommunityHub from "./CommunityHub";
 import People from "./People";
 import Profile from "./Profile";
 import SkillSearch from "./SkillSearch"
+import SkillResults from './SkillResults';
 
 const MainContent = () => {
 
@@ -15,6 +16,7 @@ const MainContent = () => {
       <Route path={'/people'} element={<People />} />
       <Route path={'/profile'} element={<Profile />} />
       <Route path={'/skill-search'} element={<SkillSearch />}/>
+      <Route path={'/search-results'} element={<SkillResults />} />
     </Routes>
   )
 
