@@ -58,8 +58,9 @@ function App() {
             <Grid
               item
               xs={12}
-              sm={9}
-              sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" } }}
+              sm={12}
+              md={9}
+              sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" },  padding: { xs: "unset", md: "0 1em 0 0" } }}
             >
               <Box>
                 <MainContent />

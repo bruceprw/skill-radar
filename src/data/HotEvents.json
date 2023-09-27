@@ -1,0 +1,40 @@
+{
+    "Events":[
+        {
+            "text": "Cyber",
+            "description": "Lorem Ipsum",
+            "image": "https://t4.ftcdn.net/jpg/06/21/18/73/240_F_621187394_yxkIdHi8Shf4dw7hKHsgBGaNwyevJHFL.jpg",
+            "icon": "DashboardIcon"
+          },
+          {
+            "text": "Digital",
+            "description": "Lorem Ipsum",
+            "image": "https://t3.ftcdn.net/jpg/06/16/00/40/240_F_616004095_Tbkwgrpmz7vJBLUb3MvxY9IeOIkN1fIu.jpg",
+            "icon": "ForumIcon"
+          },
+          {
+            "text": "Intelligence",
+            "description": "Lorem Ipsum",
+            "image": "https://t4.ftcdn.net/jpg/03/67/19/99/240_F_367199929_2b2tjRW9DJLYmxr3F0xdJuSwewSf2SNv.jpg",
+            "icon": "GroupsIcon"
+          },
+          {
+            "text": "Engineering",
+            "description": "Lorem Ipsum",
+            "image": "https://t4.ftcdn.net/jpg/04/23/41/99/240_F_423419996_CRkrjFNnKogrPaNfz0qUOBwhHXZUtDIw.jpg",
+            "icon": "GroupsIcon"
+          },
+          {
+            "text": "Logistics",
+            "description": "Lorem Ipsum",
+            "image": "https://t4.ftcdn.net/jpg/04/65/50/09/240_F_465500974_1N07eyqwdHNlil9plWNUnGMNXJIKqmQA.jpg",
+            "icon": "GroupsIcon"
+          },
+          {
+            "text": "Medical Services",
+            "description": "Lorem Ipsum",
+            "image": "https://t3.ftcdn.net/jpg/06/15/13/70/240_F_615137092_5HFXKtTjsuPINJNi2AV36NDLDIAIF2hr.jpg",
+            "icon": "GroupsIcon"
+          }
+    ]
+}

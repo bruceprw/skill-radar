@@ -10,40 +10,20 @@ import Divider from "@mui/material/Divider";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-import ForumIcon from '@mui/icons-material/Forum';
+import ForumIcon from "@mui/icons-material/Forum";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
+import MenuData from '../data/Menu.json'
 
 export default function Menu() {
   const location = useLocation();
-  const menuItems = [
-    {
-      to: "/",
-      text: "Dashboard",
-      icon: "DashboardIcon",
-    },
-    {
-      to: "/community",
-      text: "Community Hub",
-      icon: "ForumIcon",
-    },
-    {
-      to: "/people",
-      text: "People",
-      icon: "GroupsIcon",
-    },
-    {
-      to: "/skill-search",
-      text: "Skills Search",
-      icon: "GroupsIcon",
-    },
-  ];
+  const menuItems = MenuData.Menu;
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
     ForumIcon: <ForumIcon />,
-    DashboardIcon: <DashboardIcon />
+    DashboardIcon: <DashboardIcon />,
     // other icons based on your status
   };
 
@@ -72,7 +52,7 @@ export default function Menu() {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            paddingLeft: '0'
+                            paddingLeft: "0",
                           }}
                         />
                       </ListItemIcon>
