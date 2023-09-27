@@ -8,58 +8,82 @@ import Header from "./pages/Header";
 import LeftColumn from "./pages/LeftColumn";
 import MainContent from "./pages/MainContent";
 import Login from "./pages/Login";
-
 import AuthContext from "./store/auth-context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [userType, setUserType] = useState(false);
+  const [firstName, setFirstName] = useState(false);
+  const [lastName, setLastName] = useState(false);
 
   useEffect(() => {
-    const logInDate = localStorage.getItem("isLoggedIn");
 
-    if (logInDate === "1") {
-      setLoggedIn(true);
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (userEmail) {
+
+      loginHandler(userEmail, null);
+
     }
+
   }, []);
 
   const loginHandler = (email, password) => {
     let userType = 0;
+    let fname = null;
+    let lname = null;
 
-    if (email == "luke@test.com") {
+    if (email.toLowerCase() == "luke@test.com") {
       userType = 1;
+      fname = 'Luke';
+      lname = 'Dale';
     }
 
-    if (email == "jake@test.com") {
+    if (email.toLowerCase() == "jake@test.com") {
       userType = 2;
+      fname = 'Jake';
+      lname = 'Sexton';
     }
 
-    if (email == "jake@test.com") {
+    if (email.toLowerCase() == "ben@test.com") {
       userType = 3;
+      fname = 'Ben';
+      lname = 'Turner';
     }
 
     localStorage.setItem("userType", userType);
 
     if (userType) {
       setUserType(userType);
+      setFirstName(fname);
+      setLastName(lname);
 
       localStorage.setItem("isLoggedIn", "1");
+      localStorage.setItem("userEmail", email);
+
       setLoggedIn(true);
     }
   };
 
   const logoutHandler = () => {
-    console.log("LOGOUT");
+
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userType");
+    localStorage.removeItem("userEmail");
 
     setLoggedIn(false);
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn: false }}>
-
+    <AuthContext.Provider
+      value={{
+        isLoggedIn: isLoggedIn,
+        userType: userType,
+        firstName: firstName,
+        lastName: lastName,
+      }}
+    >
       {!isLoggedIn && <Login onLogin={loginHandler} />}
 
       {isLoggedIn && (

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -16,8 +16,12 @@ import { useLocation, Link } from "react-router-dom";
 import MenuData from "../data/Menu.json";
 import UserIcon from "../components/UserIcon";
 import PersonIcon from "@mui/icons-material/Person";
+import AuthContext from "../store/auth-context";
 
 export default function Menu(props) {
+
+  const ctx = useContext(AuthContext);
+  
   const location = useLocation();
   const menuItems = MenuData.Menu;
   const userType = localStorage.getItem("userType");
