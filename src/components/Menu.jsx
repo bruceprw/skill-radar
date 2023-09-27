@@ -17,6 +17,8 @@ import MenuData from "../data/Menu.json";
 import UserIcon from "../components/UserIcon";
 import PersonIcon from "@mui/icons-material/Person";
 import AuthContext from "../store/auth-context";
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 export default function Menu(props) {
   const ctx = useContext(AuthContext);
@@ -30,6 +32,8 @@ export default function Menu(props) {
     InboxIcon: <InboxIcon />,
     ForumIcon: <ForumIcon />,
     DashboardIcon: <DashboardIcon />,
+    MilitaryTechIcon: <MilitaryTechIcon />
+    
     // other icons based on your status
   };
 
@@ -44,7 +48,7 @@ export default function Menu(props) {
                   <ListItemButton>
                     <ListItemIcon>
                       <Chip
-                        icon={<ForumIcon />}
+                        icon={<CrisisAlertIcon />}
                         variant="outlined"
                         sx={{
                           backgroundColor: "#ccc",

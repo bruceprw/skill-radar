@@ -14,7 +14,7 @@ const CommandDash = () => {
     <>
     {userType == 3 && (
       <Box sx={{ maxWidth: "100%" }}>
-        <h2>Hello, {name}.</h2>
+        <h2>Commander Dashboard</h2>
         <p>Super Admin Function Here</p>
       </Box>
     )}
