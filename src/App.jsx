@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const [userType, setUserType] = useState(false);
 
   useEffect(() => {
     const logInDate = localStorage.getItem("isLoggedIn");
@@ -24,6 +25,14 @@ function App() {
   }, []);
 
   const loginHandler = (email, password) => {
+
+    if (email == 'luke@test.com') {
+
+      setUserType(1);
+      localStorage.setItem("userType", "1");
+
+    }
+    console.log(email, password);
     localStorage.setItem("isLoggedIn", "1");
     setLoggedIn(true);
   };
@@ -31,6 +40,8 @@ function App() {
   const logoutHandler = () => {
     console.log('LOGOUT')
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userType");
+
     setLoggedIn(false);
   };
 

@@ -20,8 +20,7 @@ import PersonIcon from "@mui/icons-material/Person";
 export default function Menu(props) {
   const location = useLocation();
   const menuItems = MenuData.Menu;
-
-  console.log(props)
+  const userType = localStorage.getItem("userType");
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
