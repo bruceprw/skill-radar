@@ -6,7 +6,7 @@ import UserIcon from "../components/UserIcon";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <Grid container spacing={2}>
       <Grid item xs={9} sm={6} md={8}>
@@ -40,7 +40,7 @@ const Header = () => {
             padding: "1rem",
           }}
         >
-          <UserIcon />
+          <UserIcon onLogout={props.onLogout}/>
         </Box>
       </Grid>
     </Grid>
