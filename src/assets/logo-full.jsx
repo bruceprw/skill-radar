@@ -30,7 +30,7 @@ const LogoFull = (props) => {
   return (
     <div className='logo' style={{fontSize: fontSize, display: 'flex', alignItems: 'center'}}>
       <div style={{fontFamily: 'Poppins', fontWeight: 100, color: second_colour}}>
-      Skills
+      Skill
       </div>
       <div style={{fontFamily: 'Poppins', fontWeight: 800, color: main_colour}}>
       Radar

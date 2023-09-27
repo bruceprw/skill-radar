@@ -29,7 +29,6 @@ function App() {
   };
 
   const logoutHandler = () => {
-    console.log('DO LOG OUT')
     localStorage.removeItem("isLoggedIn");
     setLoggedIn(false);
   };

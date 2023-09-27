@@ -6,10 +6,10 @@ import Events from '../data/Events.json'
 
 const data = Events.Events;
 
-const Dashboard = () => {
+const CommunityHub = () => {
   return (
     <div>
-      <h2>Overview</h2>
+      <h2>Community Hub</h2>
       <Grid container spacing={2}>
         {data.map((card) => (
           <Grid item xs={12} md={4}>
@@ -21,4 +21,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default CommunityHub;

@@ -72,7 +72,7 @@ h2 {
 }
 
 .greyscale {
-  background-color: #ccc;
+  background-color: #e9e9e9;
 }
 
 .secondary {
@@ -85,6 +85,11 @@ ul a {
 
 ul a:hover {
   color: #fff;
+}
+
+ul a:hover .MuiChip-outlined {
+  background-color: white;
+  color: black;
 }
 
 @media (prefers-color-scheme: light) {

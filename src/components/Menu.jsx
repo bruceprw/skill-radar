@@ -7,10 +7,10 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import Chip from "@mui/material/Chip";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-
+import ForumIcon from '@mui/icons-material/Forum';
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
 
@@ -23,9 +23,9 @@ export default function Menu() {
       icon: "DashboardIcon",
     },
     {
-      to: "/overview",
-      text: "Overview",
-      icon: "LeaderboardIcon",
+      to: "/community",
+      text: "Community Hub",
+      icon: "ForumIcon",
     },
     {
       to: "/people",
@@ -42,7 +42,7 @@ export default function Menu() {
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
-    LeaderboardIcon: <LeaderboardIcon />,
+    ForumIcon: <ForumIcon />,
     DashboardIcon: <DashboardIcon />
     // other icons based on your status
   };
@@ -53,10 +53,10 @@ export default function Menu() {
         <nav aria-label="main mailbox folders">
           <List>
             {menuItems.map((item) => {
-              let selected = 0;
+              let selected = false;
 
               if (location.pathname == item.to) {
-                selected = 1;
+                selected = true;
               }
 
               return (
@@ -64,7 +64,17 @@ export default function Menu() {
                   <ListItem disablePadding>
                     <ListItemButton selected={selected}>
                       <ListItemIcon>
-                        <Chip icon={statusIcon[item.icon]} variant="outlined" />
+                        <Chip
+                          icon={statusIcon[item.icon]}
+                          variant="outlined"
+                          sx={{
+                            backgroundColor: "#ccc",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            paddingLeft: '0'
+                          }}
+                        />
                       </ListItemIcon>
                       <ListItemText primary={item.text} />
                     </ListItemButton>
