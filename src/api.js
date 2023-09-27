@@ -13,3 +13,25 @@ export const getListAttributes = async () => {
   const response = await dataSet.json();
   return await response;
 };
+
+
+export const getListUsersByAttributes = async (attributes) => {
+  try {
+    const body = {
+      "queryStringParameters": {
+        "attribute": attributes,
+        "isAll": 0
+      }
+    };
+    const dataSet = await fetch(`${apiUrl}/listUsersByAttributes?attributes=${attributes.toString()}`, { method: 'POST'});
+
+    if (!dataSet.ok) {
+      throw new Error(`HTTP error ${dataSet.status}`);
+    }
+    const response = await dataSet.json();
+    return response;
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+};

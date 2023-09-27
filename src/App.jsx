@@ -67,7 +67,6 @@ function App() {
   };
 
   const logoutHandler = () => {
-
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userType");
     localStorage.removeItem("userEmail");

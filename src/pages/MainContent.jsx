@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import CommunityHub from "./CommunityHub";
@@ -9,6 +9,8 @@ import SkillResults from './SkillResults';
 import CommandDash from './CommandDash';
 
 const MainContent = () => {
+
+  const [passResults, setPassResults] = useState([])
 
   return (
     <Routes>
@@ -21,6 +23,7 @@ const MainContent = () => {
       <Route path={'/commander-dashboard'} element={<CommandDash />} />
     </Routes>
   )
+// useState with setter in skill search and getting in skill results
 
 }
 

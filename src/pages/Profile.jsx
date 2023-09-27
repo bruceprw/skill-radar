@@ -1,29 +1,77 @@
 import React from "react";
-import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import Avatar from '@mui/material/Avatar';
 
 
-const Profile = () => {
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+export default function BasicGrid() {
   return (
-    <div>
-      <h2>Profile</h2>
-      <Box>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 4, sm: 2, md: 3 }}>
-          <Grid xs={12} md={6}>   
-          <Box sx={{ width: '100%' }}>
-            Profile
-            </Box>
-            <Box >
-              Medals
-              </Box>
-          </Grid>
-          <Grid xs={12} md={6}>  
-          Account details          
-          </Grid>
-        </Grid>     
-      </Box>
-    </div>   
-  );
-};
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={6}>
+          <div>
+          <Grid item xs={12}>
 
-export default Profile;
+            <Grid item xs={6}>
+              <div>
+
+              </div>
+              <Item>Picture 
+                <Avatar
+                  src='/public/assets/profile-images/NoProfilePic.png'
+                  sx={{
+                    height: 80,
+                    mb: 2,
+                    width: 80
+                  }}
+                />
+              </Item>
+            </Grid>
+            <Grid item xs={6}>
+              <Item>info</Item>
+            </Grid>
+            
+          </Grid>
+
+          <Grid item xs={12}>
+            <Item>Intrests</Item>
+          </Grid>
+          <Grid item xs={12}>
+            <Item>skills</Item>
+          </Grid>
+          <Grid item xs={12}>
+            <Item>Qualifications</Item>
+          </Grid>
+            <Item>connections</Item>
+            <Item>xs=7</Item>
+          </div>
+          
+        </Grid>
+        
+        <Grid item xs={6}>
+          <div>
+          <Grid item xs={12}>
+          <h2>Badges</h2>
+            <Box>
+
+            </Box>
+          </Grid>
+          <Grid item xs={12}>
+            <Item>News Feed</Item>
+          </Grid> 
+          </div>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+}
