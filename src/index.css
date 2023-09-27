@@ -105,29 +105,84 @@ ul a:hover .MuiChip-outlined {
   animation: logo-spin infinite 5s linear;
 }
 
-.MuiChip-root.primary {
+.MuiChip-root.cat-1 {
   color: rgb(255, 255, 255);
 }
 
-.MuiChip-root.secondary {
-  color: white;
+.MuiChip-root.cat-2 {
+  color: rgb(13, 12, 12);
 }
 
-.MuiChip-root.alternate {
-  color: rgb(57, 57, 57);
+.MuiChip-root.cat-3 {
+  color: rgb(102, 118, 93);
 }
 
-.MuiChip-root.primary button.MuiChip-action {
+.MuiChip-root.cat-4 {
+  color: rgb(120, 156, 43);
+}
+
+.MuiChip-root.cat-5 {
+  color: rgb(167, 0, 11);
+}
+
+.MuiChip-root.cat-6 {
+  color: rgb(110, 232, 241);
+}
+
+.MuiChip-root.cat-8 {
+  color: rgb(86, 193, 37);
+}
+
+.MuiChip-root.cat-9 {
+  color: rgb(52, 152, 140);
+}
+
+.MuiChip-root.cat-10 {
+  color: rgb(156, 40, 40);
+}
+
+
+.MuiChip-root.cat-1 button.MuiChip-action {
   background-color: rgb(0, 82, 190);
 }
 
-.MuiChip-root.secondary button.MuiChip-action {
-  background-color: rgb(57, 57, 57);
+.MuiChip-root.cat-2 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
 }
 
-.MuiChip-root.alternate button.MuiChip-action {
-  background-color: rgb(89, 214, 122);
+.MuiChip-root.cat-3 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
 }
+
+.MuiChip-root.cat-4 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-5 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-6 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-7 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-8 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-9 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.cat-10 button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+
 
 .MuiChip-root button.MuiChip-action {
 

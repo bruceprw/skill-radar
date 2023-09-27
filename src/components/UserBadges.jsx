@@ -47,99 +47,41 @@ const BadgesPill = (props) => {
     }
 
     if (badge.id) {
+      let userBadge = badgeMap.filter((p) => p.id == badge.id);
 
-      let test = badgeMap.filter(p => p.id == badge.id)
-
-
-      userBadgeArray.push({ test });
-
+      userBadgeArray.push({ userBadge });
     }
 
     count++;
   });
-
-  console.log(userBadgeArray);
-
-  /*function randomIntFromInterval(min, max) {
-    // min and max included
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-
-  function getRandom(arr, n) {
-    var result = new Array(n),
-      len = arr.length,
-      taken = new Array(len);
-    if (n > len)
-      throw new RangeError("getRandom: more elements taken than available");
-    while (n--) {
-      var x = Math.floor(Math.random() * len);
-      result[n] = arr[x in taken ? taken[x] : x];
-      taken[x] = --len in taken ? taken[len] : len;
-    }
-    return result;
-  }
-
-  const randAmount = randomIntFromInterval(1, 8);
-
-  const userBadges = getRandom(badges, randAmount);
-
-  let count = 0;
-  const noOfBadges = userBadges.length;
-
-  const userBadgeArray = [];
-
-  userBadges.forEach((badge, index) => {
-    if (count == 3) {
-      return;
-      //console.log(index, number);
-    }
-
-    userBadgeArray.push({ badge });
-
-    count++;
-  });
-
-  let amountRemaining = noOfBadges - count;
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+    <Box sx={{ display: "block", justifyContent: "space-around" }}>
       {userBadgeArray.map((item) => {
         return (
-          <Tooltip title={item.badge.text} variant="solid">
+          <Tooltip title={item.userBadge[0].title} variant="solid">
             <Chip
               variant="outlined"
               color="neutral"
               size="lg"
-              className={item.badge.class}
-              startDecorator={badgeIcon[item.badge.icon]}
+              className={`cat-${item.userBadge[0].cat}`}
+              //startDecorator={badgeIcon[item.badge.icon]}
               onClick={() =>
                 alert(
-                  "You clicked the " + item.badge.text + " badge for more info!"
+                  "You clicked the " +
+                    item.userBadge[0].title +
+                    " badge for more info!"
                 )
               }
-            ></Chip>
+            >
+              {item.userBadge[0].title}
+            </Chip>
           </Tooltip>
         );
       })}
-      {amountRemaining != 0 && (
-        <Tooltip title={amountRemaining + " Other Badges"} variant="solid">
-          <Chip
-            variant="outlined"
-            color="neutral"
-            size="lg"
-            className=""
-            onClick={() =>
-              alert(
-                "You clicked the " + item.badge.text + " badge for more info!"
-              )
-            }
-          >
-            + {amountRemaining}
-          </Chip>
-        </Tooltip>
-      )}
     </Box>
-  );*/
+  );
+
 };
 
 export default BadgesPill;
