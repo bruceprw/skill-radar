@@ -23,6 +23,8 @@ const Header = (props) => {
     setDrawerState(open);
   };
 
+
+
   return (
     <>
       <Grid container spacing={2}>
@@ -67,7 +69,8 @@ const Header = (props) => {
           </Box>
         </Grid>
       </Grid>
-      <Drawer
+      <MenuDrawer onLogout={props.onLogout} drawerState={drawerState} toggleDrawer={toggleDrawer}/>
+      {/*<Drawer
         docked={false}
         width={200}
         open={drawerState}
@@ -76,7 +79,7 @@ const Header = (props) => {
         <Box>
           <Menu onLogout={props.onLogout}/>
         </Box>
-      </Drawer>
+      </Drawer>*/}
     </>
   );
 };
