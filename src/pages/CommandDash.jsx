@@ -33,7 +33,7 @@ const CommandDash = () => {
       });
   }, []);
 
-  console.log(countAttributes);
+  //console.log(countAttributes);
 
   return (
     <>
@@ -41,7 +41,7 @@ const CommandDash = () => {
       <Box sx={{ maxWidth: "100%" }}>
         <h2>Commander Dashboard</h2>
         <p>Super Admin Function Here</p>
-        <Bar />
+        <Bar data={countAttributes}/>
       </Box>
     )}
     {userType != 3 && (

@@ -25,6 +25,9 @@ export default function Bar() {
     []
   )
 
+  console.log(data);
+  console.log(primaryAxis);
+  console.log(secondaryAxes);
   return (
     <>
       <button onClick={randomizeData}>Randomize Data</button>

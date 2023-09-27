@@ -8,6 +8,7 @@ import SkillSearch from "./SkillSearch"
 import SkillResults from './SkillResults';
 import Onboarding from './Onboarding'
 import Login from './Login';
+import CommandDash from './CommandDash';
 
 const MainContent = () => {
 
@@ -23,6 +24,7 @@ const MainContent = () => {
       <Route path={'/skill-search'} element={<SkillSearch setPassResults={setPassResults}/>}/>
       <Route path={'/search-results'} element={<SkillResults passResults={passResults} />} />
       <Route path={'/onboarding'} element={<Onboarding />} />
+      <Route path={'/commander-dashboard'} element={<CommandDash />} />
 
     </Routes>
   )
