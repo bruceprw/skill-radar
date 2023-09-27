@@ -72,7 +72,7 @@ const Header = (props) => {
         onClose={toggleDrawer(false)}
       >
         <Box>
-          <Menu />
+          <Menu onLogout={props.onLogout}/>
         </Box>
       </Drawer>
     </>
