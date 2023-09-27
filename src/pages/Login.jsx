@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffec, createContext } from "react";
 
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
@@ -8,12 +8,16 @@ import LogoFull from "../assets/logo-full";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+
+  const context = createContext()
+  const navigate = useNavigate();
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -43,6 +47,10 @@ const Login = (props) => {
     event.preventDefault();
     props.onLogin(enteredEmail, enteredPassword);
   };
+
+  const handleRegister = () => {
+   navigate("/onboarding");
+  }
 
   return (
     <Box
@@ -126,8 +134,22 @@ const Login = (props) => {
                 >
                   Login
                 </Button>
-
-                
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  "& > :not(style)": { m: 1, width: "25ch" },
+                }}
+              >
+                <Button
+                  onClick={handleRegister}
+                  variant="contained"
+                  color="warning"
+                  sx={{ width: "100%" }}
+                >
+                  Register
+                </Button>
               </Box>
               <p><Checkbox id ="FirsLogCheck" />First Log On</p>
               
