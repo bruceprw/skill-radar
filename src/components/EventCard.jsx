@@ -5,27 +5,48 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Avatar from '@mui/material/Avatar';
+import Box from "@mui/material/Box";
+import Divider from '@mui/material/Divider';
+import { Stack, SvgIcon } from '@mui/material';
 
 export default function EventCard(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="green iguana"
-      />
+    <Card
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%'
+      }}
+    >
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            pb: 3
+          }}
+        >
+          <Avatar
+            src={props.logo}
+            variant="square"
+          />
+        </Box>
+        <Typography
+          align="center"
+          gutterBottom
+          variant="h5"
+        >
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.content}
+        <Divider component="li" variant="inset" />
+        <Typography
+          align="center"
+          variant="body1"
+        >
+          {props.desc}
         </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+      </CardContent> 
     </Card>
   );
 }
