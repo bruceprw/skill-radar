@@ -8,12 +8,11 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Skeleton from "@mui/material/Skeleton";
 import UserCard from "./UserCard";
-import { getListUsers } from "../api";
+import { getListUsers, getListAttributes } from "../api";
 
 export default function UserTable() {
   let [userList, setUserList] = useState([]);
   let [attributeList, setAttributeList] = useState([]);
-
   let [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -23,29 +22,14 @@ export default function UserTable() {
     });
   }, []);
 
-  /*useEffect(() => {
-    fetch(`${apiUrl}listAttributes`, {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setAttributeList(data);
-        //setIsLoading(false);
-      });
-  }, []);*/
+  useEffect(() => {
+    getListAttributes().then((data) => {
+      setAttributeList(data);
+      //setIsLoading(false)
+    });
+  }, []);
 
-  /*useEffect(() => {
-    fetch(`${apiUrl}/listUsers`, {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setUserList(data);
-        setTimeout(function () {
-          setIsLoading(false);
-        }, 1000);
-      });
-  }, []);*/
+  console.log(attributeList);
 
   return (
     <>
@@ -85,7 +69,7 @@ export default function UserTable() {
             <TableBody>
               {userList.map((user) => (
                 <TableRow
-                  key={user.id}
+                  key={user.sn}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell component="th" scope="row">
@@ -102,7 +86,7 @@ export default function UserTable() {
         </TableContainer>
         {userList.map((user) => (
 
-          <UserCard />
+          <UserCard key={user.sn} userId={user.sn} title={`${user.FirstName} ${user.Surname}`} content="XX"/>
 
         ))}
         </>
