@@ -64,6 +64,28 @@ export default function Menu(props) {
                 </ListItem>
               </Link>
             )}
+            {userType != 1 && (
+              <Link to={'/skill-search'}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Chip
+                        icon={<MilitaryTechIcon/>}
+                        variant="outlined"
+                        sx={{
+                          backgroundColor: "#ccc",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Skills Search" />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            )}
             {menuItems.map((item) => {
               let selected = false;
 
