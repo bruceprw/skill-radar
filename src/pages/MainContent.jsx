@@ -4,7 +4,7 @@ import Dashboard from "./Dashboard";
 import Overview from "./Overview";
 import People from "./People";
 import Profile from "./Profile";
-import { SkillSearch } from '../sections/skills/skillSearch';
+import SkillSearch from "./SkillSearch"
 
 const MainContent = () => {
 
