@@ -19,12 +19,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import AuthContext from "../store/auth-context";
 
 export default function Menu(props) {
-
   const ctx = useContext(AuthContext);
-  
+
   const location = useLocation();
   const menuItems = MenuData.Menu;
-  const userType = localStorage.getItem("userType");
+  const userType = ctx.userType;
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
@@ -39,6 +38,28 @@ export default function Menu(props) {
       <Box sx={{ width: "100%" }}>
         <nav aria-label="main mailbox folders">
           <List>
+            {userType == 3 && (
+              <Link to={'/commander-dashboard'}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Chip
+                        icon={<ForumIcon />}
+                        variant="outlined"
+                        sx={{
+                          backgroundColor: "#ccc",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Command Dash" />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            )}
             {menuItems.map((item) => {
               let selected = false;
 

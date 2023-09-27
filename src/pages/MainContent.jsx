@@ -6,6 +6,7 @@ import People from "./People";
 import Profile from "./Profile";
 import SkillSearch from "./SkillSearch"
 import SkillResults from './SkillResults';
+import CommandDash from './CommandDash';
 
 const MainContent = () => {
 
@@ -17,6 +18,7 @@ const MainContent = () => {
       <Route path={'/profile'} element={<Profile />} />
       <Route path={'/skill-search'} element={<SkillSearch />}/>
       <Route path={'/search-results'} element={<SkillResults />} />
+      <Route path={'/commander-dashboard'} element={<CommandDash />} />
     </Routes>
   )
 
