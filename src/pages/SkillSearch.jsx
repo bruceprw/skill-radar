@@ -1,66 +1,14 @@
-import { useCallback, useMemo, useState } from 'react';
-import Head from 'next/head';
-import { subDays, subHours } from 'date-fns';
 import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
 import ArrowUpOnSquareIcon from '@heroicons/react/24/solid/ArrowUpOnSquareIcon';
 import PlusIcon from '@heroicons/react/24/solid/PlusIcon';
 import { Box, Button, Container, Stack, SvgIcon, Typography } from '@mui/material';
-import { useSelection } from 'src/hooks/use-selection';
-import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
-import { SkillSearch } from 'src/sections/skills/skillSearch';
-import { applyPagination } from 'src/utils/apply-pagination';
-import SkillGrid from '../components/skillGrid';
-
-const now = new Date();
-
-const data = [];
-
-const useCustomers = (page, rowsPerPage) => {
-  return useMemo(
-    () => {
-      return applyPagination(data, page, rowsPerPage);
-    },
-    [page, rowsPerPage]
-  );
-};
-
-const useCustomerIds = (customers) => {
-  return useMemo(
-    () => {
-      return customers.map((customer) => customer.id);
-    },
-    [customers]
-  );
-};
+import { SkillSearchSection } from '../components/SkillSearchSection'
+import SkillGrid from '../components/skillGrid'
 
 const Page = () => {
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const customers = useCustomers(page, rowsPerPage);
-  const customersIds = useCustomerIds(customers);
-  const customersSelection = useSelection(customersIds);
-
-  const handlePageChange = useCallback(
-    (event, value) => {
-      setPage(value);
-    },
-    []
-  );
-
-  const handleRowsPerPageChange = useCallback(
-    (event) => {
-      setRowsPerPage(event.target.value);
-    },
-    []
-  );
 
   return (
     <>
-      <Head>
-        <title>
-          People
-        </title>
-      </Head>
       <Box
         component="main"
         sx={{
@@ -77,7 +25,7 @@ const Page = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
-                  People
+                  Skill Search
                 </Typography>
                 <Stack
                   alignItems="center"
@@ -119,11 +67,10 @@ const Page = () => {
                 </Button>
               </div>
             </Stack>
-            <SkillSearch />
+            <SkillSearchSection />
             <Typography variant="h5">
                   Trending skills
                 </Typography>
-            <SkillGrid />
             <SkillGrid />
           </Stack>
         </Container>
