@@ -10,7 +10,7 @@ import Divider from "@mui/material/Divider";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-
+import ForumIcon from '@mui/icons-material/Forum';
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
 
@@ -23,9 +23,9 @@ export default function Menu() {
       icon: "DashboardIcon",
     },
     {
-      to: "/overview",
-      text: "Overview",
-      icon: "LeaderboardIcon",
+      to: "/community",
+      text: "Community Hub",
+      icon: "ForumIcon",
     },
     {
       to: "/people",
@@ -42,7 +42,7 @@ export default function Menu() {
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
-    LeaderboardIcon: <LeaderboardIcon />,
+    ForumIcon: <ForumIcon />,
     DashboardIcon: <DashboardIcon />
     // other icons based on your status
   };
