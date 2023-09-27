@@ -9,16 +9,7 @@ import LeftColumn from "./pages/LeftColumn";
 import MainContent from "./pages/MainContent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <Router>
@@ -28,12 +19,12 @@ function App() {
             <Header />
           </Box>
         </Grid>
-        <Grid item xs={3} className="greyscale" sx={{ height: "100vh" }}>
+        <Grid item xs={0} sm={3} className="greyscale" sx={{ height: "100vh", display: { xs: 'none', md: 'block' } }}>
           <Box>
             <LeftColumn />
           </Box>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={12} sm={9} sx={{margin: { xs: '0 2em 0 2em', md: '0 auto' } }}> 
           <Box>
             <MainContent />
           </Box>

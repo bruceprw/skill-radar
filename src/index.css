@@ -68,7 +68,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 3em;
   margin-top: 0;
-  color: #3DCAB1;
+  color: #424242;
 }
 
 .greyscale {
@@ -77,6 +77,14 @@ h2 {
 
 .secondary {
   background-color: #3DCAB1;
+}
+
+ul a {
+  color: #071C42;
+}
+
+ul a:hover {
+  color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
