@@ -3,11 +3,15 @@ import useDemoConfig from "./useDemoConfig"
 import React from "react"
 import { Chart } from "react-charts"
 
-export default function Bar() {
-  const { data, randomizeData } = useDemoConfig({
-    series: 3,
-    dataType: "ordinal"
-  })
+export default function Bar(props) {
+
+  const isLoading = props.isLoading;
+
+  if (isLoading) {
+
+    return;
+
+  }
 
   const primaryAxis = React.useMemo(
     () => ({
@@ -25,14 +29,22 @@ export default function Bar() {
     []
   )
 
-  console.log(data);
-  console.log(primaryAxis);
-  console.log(secondaryAxes);
+
+
+const chartdata = props.data;
+
+const renderedData = chartdata.map(dataArray => ({ primary: dataArray.name, secondary: dataArray.count }));
+
+const data = [
+  {
+      "label": "Series 1",
+      "data": renderedData
+  }
+];
+  console.log('Result', data);
+
   return (
     <>
-      <button onClick={randomizeData}>Randomize Data</button>
-      <br />
-      <br />
       <ResizableBox>
         <Chart
           options={{
