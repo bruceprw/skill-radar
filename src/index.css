@@ -57,15 +57,15 @@ button:focus-visible {
 }
 
 .primary {
-  background-color: #071C42;
+  background-color: #071c42;
 }
 
 .logo {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 3em;
   margin-top: 0;
   margin-bottom: 0.25em;
@@ -77,15 +77,23 @@ h2 {
 }
 
 .secondary {
-  background-color: #3DCAB1;
+  background-color: #3dcab1;
+}
+
+.text-secondary {
+  color: #3dcab1;
 }
 
 ul a {
-  color: #071C42;
+  color: #071c42;
 }
 
 ul a:hover {
   color: #fff;
+}
+
+a.alternate:hover {
+  color: #3dcab1;
 }
 
 ul a:hover .MuiChip-outlined {
