@@ -24,6 +24,9 @@ const Dashboard = () => {
           You are a super-duper admin
         </Alert>
       )}
+      <Box sx={{ marginBottom: "1em", width: "auto", display: 'flex', alignItems: 'center', background: '#f0f4f8', borderRadius: '10px', padding: '1em' }}>
+      <div style={{fontSize: '2rem'}}>🔥</div>&nbsp;&nbsp; Check out these hot skills in&nbsp;<b>Defence</b>&nbsp;needed&nbsp;<b>right now</b>&nbsp;and register your interest!
+      </Box>
       {userType == 1 && (
         <Stack   direction={{ xs: 'column', sm: 'row' }}
         spacing={{ xs: 1, sm: 2, md: 4 }}>
