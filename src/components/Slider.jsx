@@ -29,7 +29,7 @@ export default function SlideComponent() {
     <>
       <Slider {...settings}>
         {slides.map((slide) => (
-          <Box onClick={modalHandler}>
+          <Box onClick={modalHandler} key={slide.text}>
             <SliderCard
               key={slide.text}
               title={slide.text}
