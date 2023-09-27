@@ -34,8 +34,6 @@ const CommandDash = () => {
       });
   }, []);
 
-  //console.log(countAttributes);
-
   return (
     <>
     {userType == 3 && (
