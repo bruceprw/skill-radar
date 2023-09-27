@@ -93,6 +93,23 @@ ul a:hover .MuiChip-outlined {
   color: black;
 }
 
+.logo-spin {
+  animation: logo-spin infinite 5s linear;
+}
+
+.logo-spin.fast {
+  animation: logo-spin infinite 1s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

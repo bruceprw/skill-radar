@@ -3,6 +3,7 @@ import Alert from "@mui/material/Alert";
 import Skeleton from "@mui/material/Skeleton";
 import UserCard from "./UserCard";
 import Grid from "@mui/material/Grid";
+import LoadingLogo from "../assets/loading-logo";
 import { getListUsers, getListAttributes } from "../api";
 
 export default function UserTable() {
@@ -13,7 +14,10 @@ export default function UserTable() {
   useEffect(() => {
     getListUsers().then((data) => {
       setUserList(data);
-      setIsLoading(false);
+
+      setTimeout(function () {
+        setIsLoading(false);
+      }, 1500);
     });
   }, []);
 
@@ -29,26 +33,16 @@ export default function UserTable() {
   return (
     <>
       {isLoading && (
-        <>
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-        </>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "50vh"
+          }}
+        >
+          <LoadingLogo colour={"#cccccc"} />
+        </div>
       )}
       {!isLoading && (
         <>
