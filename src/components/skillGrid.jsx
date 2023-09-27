@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import SkillCard from "./SkillCard.jsx";
+import SkillCard from "./skillCard.jsx";
 
 const SkillGrid = () => {
   const skills = [

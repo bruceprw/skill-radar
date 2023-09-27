@@ -3,7 +3,7 @@ import ArrowUpOnSquareIcon from '@heroicons/react/24/solid/ArrowUpOnSquareIcon';
 import PlusIcon from '@heroicons/react/24/solid/PlusIcon';
 import { Box, Button, Container, Stack, SvgIcon, Typography } from '@mui/material';
 import { SkillSearchSection } from '../components/SkillSearchSection'
-import SkillGrid from '../components/SkillGrid'
+import SkillGrid from '../components/skillGrid.jsx'
 
 const Page = () => {
 
