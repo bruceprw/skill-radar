@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
 import { Box, Card, InputAdornment, OutlinedInput, SvgIcon, Button, FormControl, Select, MenuItem, Checkbox, ListItemText, Input, InputLabel, Chip, Autocomplete, TextField } from '@mui/material';
+import {useNavigate} from 'react-router-dom';
 
 export const SkillSearchSection = () => {
   const [selectedSkills, setSelectedSkills] = useState([]);
-
+  const navigate=useNavigate();
 
   const handleSkillChange = (newValue) => {
     setSelectedSkills(newValue);
@@ -15,8 +16,8 @@ export const SkillSearchSection = () => {
   };
 
   const startSearch = () => {
-    // TODO: Implement skill logic
-    console.log("Searching with skills:", selectedSkills);
+    navigate("/search-results")
+    
   };
 
   const skills = ["Python", "Archery"];
@@ -54,7 +55,13 @@ export const SkillSearchSection = () => {
           Start Search
         </Button>
       </Card>
+      <iframe
+        width="960"
+        height="720"
+        src="https://eu-west-2.quicksight.aws.amazon.com/sn/embed/share/accounts/896803506373/dashboards/c2fcdfd1-a070-415c-ace7-a63bd79aeee1?directory_alias=teamnine">
+    </iframe>
     </Box>
+    
   );
 };
 
