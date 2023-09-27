@@ -79,7 +79,7 @@ const BadgesPill = (props) => {
               color="neutral"
               size="lg"
               className={`cat-${item.userBadge[0].cat}`}
-              //startDecorator={badgeIcon[item.badge.icon]}
+              //startDecorator={badgeIcon[item.userBadge[0].icon]}
               onClick={() =>
                 alert(
                   "You clicked the " +
@@ -88,7 +88,6 @@ const BadgesPill = (props) => {
                 )
               }
             >
-              {item.userBadge[0].title}
             </Chip>
           </Tooltip>
         );
