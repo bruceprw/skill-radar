@@ -32,13 +32,18 @@ export default function Menu() {
       text: "People",
       icon: "GroupsIcon",
     },
+    {
+      to: "/skill-search",
+      text: "Skills Search",
+      icon: "GroupsIcon",
+    },
   ];
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
     LeaderboardIcon: <LeaderboardIcon />,
-    DashboardIcon: <DashboardIcon />,
+    DashboardIcon: <DashboardIcon />
     // other icons based on your status
   };
 
