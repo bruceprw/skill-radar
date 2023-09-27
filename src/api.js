@@ -7,17 +7,8 @@ export const getListUsers = async () => {
     return await response;
 };
 
-/*export const addUsers = () => {
-
-    fetch(`${apiUrl}/listUsers`, {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-       /* setUserList(data);
-        setTimeout(function () {
-          setIsLoading(false);
-        }, 1000);
-        return data;
-      });
-  }*/
+export const getListAttributes = async () => {
+  const dataSet = await fetch(`${apiUrl}/listAttributes`);
+  const response = await dataSet.json();
+  return await response;
+};
