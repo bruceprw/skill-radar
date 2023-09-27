@@ -46,7 +46,7 @@ export default function UserCard(props) {
         </Chip>
         <Typography level="title-lg">{props.title}</Typography>
       </CardContent>
-      <UserBadges />
+      <UserBadges badges={props.badges}/>
 
       <CardOverflow sx={{ bgcolor: 'background.level1' }}>
         <CardActions buttonFlex="1">

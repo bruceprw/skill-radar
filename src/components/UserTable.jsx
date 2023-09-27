@@ -16,7 +16,6 @@ export default function UserTable() {
   useEffect(() => {
     getListUsers()
       .then((data) => {
-        console.log('Fetched', data)
         setUserList(data);
         setTimeout(function () {
           setIsLoading(false);
@@ -70,7 +69,8 @@ export default function UserTable() {
                   key={user.sn}
                   userId={user.sn}
                   title={`${user.FirstName} ${user.Surname}`}
-                  content="XX"
+                  badges={user.attributes}
+                  content=""
                 />
               </Grid>
             ))}

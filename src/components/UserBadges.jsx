@@ -13,6 +13,8 @@ import Chip from "@mui/joy/Chip";
 import Tooltip from "@mui/joy/Tooltip";
 import Box from "@mui/material/Box";
 
+import BadgeMap from "./BadgeMap";
+
 const badgeIcon = {
   FlightIcon: <FlightIcon />,
   ParaglidingIcon: <ParaglidingIcon />,
@@ -32,7 +34,33 @@ const BadgesPill = (props) => {
   const badges = BadgeData.Badges;
   const numberOfBadges = props.number;
 
-  function randomIntFromInterval(min, max) {
+  const badgeMap = BadgeMap();
+  const userBadgeList = props.badges;
+
+  const userBadgeArray = [];
+  let count = 0;
+
+  userBadgeList.forEach((badge, index) => {
+    if (count == 3) {
+      return;
+      //console.log(index, number);
+    }
+
+    if (badge.id) {
+
+      let test = badgeMap.filter(p => p.id == badge.id)
+
+
+      userBadgeArray.push({ test });
+
+    }
+
+    count++;
+  });
+
+  console.log(userBadgeArray);
+
+  /*function randomIntFromInterval(min, max) {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
@@ -111,7 +139,7 @@ const BadgesPill = (props) => {
         </Tooltip>
       )}
     </Box>
-  );
+  );*/
 };
 
 export default BadgesPill;

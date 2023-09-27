@@ -20,9 +20,9 @@ const Dashboard = () => {
           You are a super-duper admin
         </Alert>
       )}
-      <Alert severity="info" sx={{ marginBottom: "1em", width: "auto" }}>
-        Check out the hot skills in Defence needed right now.
-      </Alert>
+      <Box sx={{ marginBottom: "1em", width: "auto", display: 'flex', alignItems: 'center', background: '#f0f4f8', borderRadius: '10px', padding: '1em' }}>
+      <div style={{fontSize: '2rem'}}>🔥</div>&nbsp;&nbsp; Check out these hot skills in&nbsp;<b>Defence</b>&nbsp;needed&nbsp;<b>right now</b>&nbsp;and register your interest!
+      </Box>
       <Box sx={{ maxWidth: "100%" }}>
         <SlideComponent />
       </Box>
