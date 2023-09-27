@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
 import { Box, Card, InputAdornment, OutlinedInput, SvgIcon, Button, FormControl, Select, MenuItem, Checkbox, ListItemText, Input, InputLabel, Chip, Autocomplete, TextField } from '@mui/material';
 import {useNavigate} from 'react-router-dom';
-
-export const SkillSearchSection = () => {
+import { getListUsersByAttributes } from '../api';
+export const SkillSearchSection = ({setPassResults}) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
   const navigate=useNavigate();
 
@@ -11,16 +11,37 @@ export const SkillSearchSection = () => {
     setSelectedSkills(newValue);
   };
 
+  //  const handleIndexes = (event, value) => {
+  //   const selectedIndexes = value.map((v) => options.indexOf(v));
+  //   console.log("Selected indexes:", selectedIndexes);
+  // };
+
   const removeSkill = (skill) => {
     setSelectedSkills((prevSkills) => prevSkills.filter((s) => s !== skill));
   };
 
-  const startSearch = () => {
+  const startSearch = async () => {
+
+    const results = await(getListUsersByAttributes(selectedSkills));
+    setPassResults(results)
     navigate("/search-results")
     
   };
 
-  const skills = ["Python", "Archery"];
+
+
+  const skills = [
+                    "Python Programming",
+                    "Motor Biking",
+                    "C++ Programming",
+                    "French Language",
+                    "Spanish Language",
+                    "First Aider",
+                    "Physiotherapist",
+                    "Chef",
+                    "Power BI",
+                    "Figma"
+                  ];
 
   return (
     <Box>
@@ -55,6 +76,11 @@ export const SkillSearchSection = () => {
           Start Search
         </Button>
       </Card>
+      <iframe
+        width="960"
+        height="720"
+        src="https://eu-west-2.quicksight.aws.amazon.com/sn/embed/share/accounts/896803506373/dashboards/c2fcdfd1-a070-415c-ace7-a63bd79aeee1?directory_alias=teamnine">
+    </iframe>
     </Box>
     
   );

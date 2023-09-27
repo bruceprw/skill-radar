@@ -5,7 +5,7 @@ import { Box, Button, Container, Stack, SvgIcon, Typography } from '@mui/materia
 import { SkillSearchSection } from '../components/SkillSearchSection'
 import SkillGrid from '../components/skillGrid.jsx'
 
-const Page = () => {
+const Page = ({setPassResults}) => {
 
   return (
     <>
@@ -67,7 +67,7 @@ const Page = () => {
                 </Button>
               </div>
             </Stack>
-            <SkillSearchSection />
+            <SkillSearchSection setPassResults={setPassResults} />
             <Typography variant="h5">
                   Trending skills
                 </Typography>

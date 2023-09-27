@@ -1,7 +1,7 @@
 import { Container, Stack, Typography } from "@mui/material";
 import SkillResultsTable from "../components/SkillResultsTable";
 
-const SkillResults = () => {
+const SkillResults = ({passResults}) => {
     return ( 
         <>
         <Container maxWidth="xl">
@@ -12,7 +12,7 @@ const SkillResults = () => {
                     </Typography>
                 </Stack>
             </Stack>
-            <SkillResultsTable />
+            <SkillResultsTable passResults={passResults} />
         </Container>
         </>
      );

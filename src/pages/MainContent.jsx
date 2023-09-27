@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import CommunityHub from "./CommunityHub";
@@ -9,16 +9,19 @@ import SkillResults from './SkillResults';
 
 const MainContent = () => {
 
+  const [passResults, setPassResults] = useState([])
+
   return (
     <Routes>
       <Route path={'/'} element={<Dashboard />} />
       <Route path={'/community'} element={<CommunityHub />} />
       <Route path={'/people'} element={<People />} />
       <Route path={'/profile'} element={<Profile />} />
-      <Route path={'/skill-search'} element={<SkillSearch />}/>
-      <Route path={'/search-results'} element={<SkillResults />} />
+      <Route path={'/skill-search'} element={<SkillSearch setPassResults={setPassResults}/>}/>
+      <Route path={'/search-results'} element={<SkillResults passResults={passResults} />} />
     </Routes>
   )
+// useState with setter in skill search and getting in skill results
 
 }
 
