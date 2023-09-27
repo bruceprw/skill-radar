@@ -1,4 +1,6 @@
 import { Button, Container, Stack, Typography, SvgIcon } from "@mui/material";
+import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
+
 import SkillResultsTable from "../components/SkillResultsTable";
 import { ArrowLeft } from "@mui/icons-material";
 import {useNavigate} from 'react-router-dom';
@@ -9,7 +11,8 @@ const SkillResults = ({passResults}) => {
     return ( 
         <>
         <Container maxWidth="xl">
-        <Button
+            <Button
+                    sx={{mt: 2, mb: 2}}
                     onClick={() => navigate('/skill-search') }
                     variant="contained"
                     startIcon={(
@@ -20,6 +23,7 @@ const SkillResults = ({passResults}) => {
                   >
                     Back
                   </Button>
+        
             <Stack spacing={3}>
                 <Stack spacing={1}>
                     <Typography variant="h4">
@@ -27,7 +31,36 @@ const SkillResults = ({passResults}) => {
                     </Typography>
                 </Stack>
             </Stack>
-            <SkillResultsTable passResults={passResults} />
+            <Stack
+                  alignItems="center"
+                  direction="row"
+                  spacing={1}
+                >
+                  <Button
+                    sx={{mt: 2, mb: 2}}
+                    color="inherit"
+                    startIcon={(
+                      <SvgIcon fontSize="small">
+                        <ArrowDownOnSquareIcon />
+                      </SvgIcon>
+                    )}
+                  >
+                    Export
+                  </Button>
+                </Stack>
+                <Stack
+                    spacing={1}
+                >
+                    <SkillResultsTable passResults={passResults} />
+
+                </Stack>
+            <Stack>
+                    <Button
+                        variant="contained"
+                    >
+                        Email selected users
+                    </Button>
+            </Stack>
         </Container>
         </>
      );
