@@ -4,31 +4,43 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import Chip from "@mui/material/Chip";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import InboxIcon from "@mui/icons-material/Inbox";
+import LeaderboardIcon from "@mui/icons-material/Leaderboard";
+
+import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
 
 export default function Menu() {
-
   const location = useLocation();
   const menuItems = [
     {
       to: "/",
       text: "Dashboard",
-      icon: "InboxIcon",
+      icon: "DashboardIcon",
     },
     {
       to: "/overview",
       text: "Overview",
-      icon: "InboxIcon",
+      icon: "LeaderboardIcon",
     },
     {
       to: "/people",
       text: "People",
-      icon: "InboxIcon",
+      icon: "GroupsIcon",
     },
   ];
+
+  const statusIcon = {
+    GroupsIcon: <GroupsIcon />,
+    InboxIcon: <InboxIcon />,
+    LeaderboardIcon: <LeaderboardIcon />,
+    DashboardIcon: <DashboardIcon />
+    // other icons based on your status
+  };
 
   return (
     <>
@@ -44,9 +56,11 @@ export default function Menu() {
 
               return (
                 <Link to={item.to} key={item.to}>
-                  <ListItem disablePadding >
+                  <ListItem disablePadding>
                     <ListItemButton selected={selected}>
-                      <ListItemIcon>ICON</ListItemIcon>
+                      <ListItemIcon>
+                        <Chip icon={statusIcon[item.icon]} variant="outlined" />
+                      </ListItemIcon>
                       <ListItemText primary={item.text} />
                     </ListItemButton>
                   </ListItem>
