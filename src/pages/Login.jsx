@@ -112,10 +112,7 @@ const Login = (props) => {
               noValidate
               autoComplete="off"
             >
-              <p>
-                Use luke, jake or ben @test.com as email and any 6 letter
-                password
-              </p>
+
             </Box>
             <div>
               <Box
@@ -135,25 +132,6 @@ const Login = (props) => {
                   Login
                 </Button>
               </Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  "& > :not(style)": { m: 1, width: "25ch" },
-                }}
-              >
-                <Button
-                  onClick={handleRegister}
-                  variant="contained"
-                  color="warning"
-                  sx={{ width: "100%" }}
-                >
-                  Register
-                </Button>
-              </Box>
-              <p><Checkbox id ="FirsLogCheck" />First Log On</p>
-              
-              
             </div>
           </form>
         </Card>
