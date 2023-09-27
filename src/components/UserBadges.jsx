@@ -30,16 +30,30 @@ import Box from "@mui/material/Box";
 import BadgeMap from "./BadgeMap";
 
 const badgeIcon = {
-  FlightIcon: <FlightIcon />,
-  ParaglidingIcon: <ParaglidingIcon />,
-  PhpIcon: <PhpIcon />,
-  JavascriptIcon: <JavascriptIcon />,
-  DirectionsRunIcon: <DirectionsRunIcon />,
-  DirectionsBikeIcon: <DirectionsBikeIcon />,
-  GolfCourseIcon: <GolfCourseIcon />,
-  LocalSeeIcon: <LocalSeeIcon />,
-  SailingIcon: <SailingIcon />,
-  SnowboardingIcon: <SnowboardingIcon />,
+  AcUnitIconUsage : <AcUnitIcon />,
+  CodeIconUsage : <CodeIcon />,
+  TwoWheelerIconUsage : <TwoWheelerIcon />,
+  TerminalIconUsage : <TerminalIcon />,
+  FlagIconUsage : <FlagIcon />,
+  MedicalServicesIconUsage : <MedicalServicesIcon />,
+  HealingIconUsage : <HealingIcon />,
+  OutdoorGrillIconUsage : <OutdoorGrillIcon />,
+  DonutLargeIconUsage : <DonutLargeIcon />,
+  ExtensionIconUsage : <ExtensionIcon />,
+  SportsIconUsage : <SportsIcon />,
+  SportsMmaIconUsage : <SportsMmaIcon />,
+  SportsEsportsIconUsage : <SportsEsportsIcon />,
+  CakeIconUsage : <CakeIcon />,
+  RestaurantMenuIconUsage : <RestaurantMenuIcon />,
+  DownhillSkiingIconUsage : <DownhillSkiingIcon />,
+  HikingIconUsage : <HikingIcon />,
+  PrintIconUsage : <PrintIcon />,
+  DesignServicesIconUsage : <DesignServicesIcon />,
+  ManageSearchIconUsage : <ManageSearchIcon />,
+  ScubaDivingIconUsage : <ScubaDivingIcon />,
+  BorderAllIconUsage : <BorderAllIcon />,
+  BoltIconUsage : <BoltIcon />,
+  WysiwygIconUsage : <WysiwygIcon />
 
   // other icons based on your status
 };
