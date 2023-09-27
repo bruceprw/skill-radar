@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
+  const [userType, setUserType] = useState(false);
 
   useEffect(() => {
     const logInDate = localStorage.getItem("isLoggedIn");
@@ -24,12 +25,23 @@ function App() {
   }, []);
 
   const loginHandler = (email, password) => {
+
+    if (email == 'luke@test.com') {
+
+      setUserType(1);
+      localStorage.setItem("userType", "1");
+
+    }
+    console.log(email, password);
     localStorage.setItem("isLoggedIn", "1");
     setLoggedIn(true);
   };
 
   const logoutHandler = () => {
+    console.log('LOGOUT')
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userType");
+
     setLoggedIn(false);
   };
 
@@ -49,17 +61,18 @@ function App() {
               xs={0}
               sm={3}
               className="greyscale"
-              sx={{ height: "100vh", display: { xs: "none", md: "block" } }}
+              sx={{ height: "auto", display: { xs: "none", md: "block" } }}
             >
               <Box>
-                <LeftColumn />
+                <LeftColumn onLogout={logoutHandler}/>
               </Box>
             </Grid>
             <Grid
               item
               xs={12}
-              sm={9}
-              sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" } }}
+              sm={12}
+              md={9}
+              sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" },  padding: { xs: "unset", md: "0 1em 0 0" } }}
             >
               <Box>
                 <MainContent />

@@ -1,0 +1,24 @@
+{
+    "Menu":[
+        {
+            "to": "/",
+            "text": "Dashboard",
+            "icon": "DashboardIcon"
+          },
+          {
+            "to": "/community",
+            "text": "Community Hub",
+            "icon": "ForumIcon"
+          },
+          {
+            "to": "/people",
+            "text": "People",
+            "icon": "GroupsIcon"
+          },
+          {
+            "to": "/skill-search",
+            "text": "Skills Search",
+            "icon": "GroupsIcon"
+          }
+    ]
+}

@@ -23,9 +23,7 @@ export default function UserCard(props) {
   return (
     <Card
       sx={{
-        width: 320,
         maxWidth: '100%',
-        boxShadow: 'lg',
       }}
     >
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>

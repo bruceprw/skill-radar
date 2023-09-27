@@ -10,40 +10,23 @@ import Divider from "@mui/material/Divider";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-import ForumIcon from '@mui/icons-material/Forum';
+import ForumIcon from "@mui/icons-material/Forum";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
+import MenuData from "../data/Menu.json";
+import UserIcon from "../components/UserIcon";
+import PersonIcon from "@mui/icons-material/Person";
 
-export default function Menu() {
+export default function Menu(props) {
   const location = useLocation();
-  const menuItems = [
-    {
-      to: "/",
-      text: "Dashboard",
-      icon: "DashboardIcon",
-    },
-    {
-      to: "/community",
-      text: "Community Hub",
-      icon: "ForumIcon",
-    },
-    {
-      to: "/people",
-      text: "People",
-      icon: "GroupsIcon",
-    },
-    {
-      to: "/skill-search",
-      text: "Skills Search",
-      icon: "GroupsIcon",
-    },
-  ];
+  const menuItems = MenuData.Menu;
+  const userType = localStorage.getItem("userType");
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
     ForumIcon: <ForumIcon />,
-    DashboardIcon: <DashboardIcon />
+    DashboardIcon: <DashboardIcon />,
     // other icons based on your status
   };
 
@@ -72,7 +55,7 @@ export default function Menu() {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            paddingLeft: '0'
+                            paddingLeft: "0",
                           }}
                         />
                       </ListItemIcon>
@@ -84,6 +67,37 @@ export default function Menu() {
             })}
           </List>
         </nav>
+        <Box
+          sx={{
+            display: { xs: "block", md: "none" },
+          }}
+        >
+          <Link to={"/profile"}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Chip
+                    icon={<PersonIcon />}
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: "#ccc",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      paddingLeft: "0",
+                    }}
+                  />
+                </ListItemIcon>
+                <ListItemText primary="Profile" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <ListItem disablePadding onClick={props.onLogout}>
+            <ListItemButton>
+              <ListItemText primary="Logout" />
+            </ListItemButton>
+          </ListItem>
+        </Box>
       </Box>
     </>
   );

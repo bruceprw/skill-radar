@@ -24,7 +24,7 @@ export default function UserTable() {
     });
   }, []);
 
-  console.log(attributeList);
+  //console.log(attributeList);
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function UserTable() {
           </Alert>
           <Grid container spacing={2}>
             {userList.map((user) => (
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} sm={6} md={4}>
                 <UserCard
                   key={user.sn}
                   userId={user.sn}
