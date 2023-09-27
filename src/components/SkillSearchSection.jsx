@@ -5,30 +5,28 @@ import {useNavigate} from 'react-router-dom';
 import { getListUsersByAttributes } from '../api';
 export const SkillSearchSection = ({setPassResults}) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedIndexes, setSelectedIndexes] = useState([])
   const navigate=useNavigate();
 
   const handleSkillChange = (newValue) => {
     setSelectedSkills(newValue);
+    handleIndexes(newValue);
   };
 
-  //  const handleIndexes = (event, value) => {
-  //   const selectedIndexes = value.map((v) => options.indexOf(v));
-  //   console.log("Selected indexes:", selectedIndexes);
-  // };
+   const handleIndexes = (value) => {
+    setSelectedIndexes(value.map((v) => skills.indexOf(v) + 1));
+  };
 
   const removeSkill = (skill) => {
     setSelectedSkills((prevSkills) => prevSkills.filter((s) => s !== skill));
   };
 
   const startSearch = async () => {
-
-    const results = await(getListUsersByAttributes(selectedSkills));
+    const results = await(getListUsersByAttributes(selectedIndexes));
     setPassResults(results)
     navigate("/search-results")
     
   };
-
-
 
   const skills = [
                     "Python Programming",
@@ -76,11 +74,6 @@ export const SkillSearchSection = ({setPassResults}) => {
           Start Search
         </Button>
       </Card>
-      <iframe
-        width="960"
-        height="720"
-        src="https://eu-west-2.quicksight.aws.amazon.com/sn/embed/share/accounts/896803506373/dashboards/c2fcdfd1-a070-415c-ace7-a63bd79aeee1?directory_alias=teamnine">
-    </iframe>
     </Box>
     
   );

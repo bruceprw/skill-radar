@@ -18,7 +18,7 @@ export const getListUsersByAttributes = async (attributes) => {
   try {
     const body = {
       "queryStringParameters": {
-        "attribute": attributes.map(),
+        "attribute": attributes,
         "isAll": 0
       }
     };
