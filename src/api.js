@@ -22,7 +22,8 @@ export const getListUsersByAttributes = async (attributes) => {
         "isAll": 0
       }
     };
-    const dataSet = await fetch(`${apiUrl}/listUsersByAttributes`, { method: 'POST', body: JSON.stringify(body)});
+    const dataSet = await fetch(`${apiUrl}/listUsersByAttributes?attributes=${attributes.toString()}`, { method: 'POST'});
+
     if (!dataSet.ok) {
       throw new Error(`HTTP error ${dataSet.status}`);
     }
