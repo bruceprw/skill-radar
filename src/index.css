@@ -146,6 +146,7 @@ ul a:hover .MuiChip-outlined {
 
 
 .MuiChip-root.cat-1 button.MuiChip-action {
+
   background-color: rgb(185, 242, 179);
   outline-color: rgb(41,176,25);
 }

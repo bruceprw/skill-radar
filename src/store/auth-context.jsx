@@ -5,6 +5,8 @@ const AuthContext = React.createContext({
     userType: 0,
     firstName: null,
     lasttName: null,
+    userContact: null,
+
 });
 
 export default AuthContext;

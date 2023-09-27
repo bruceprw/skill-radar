@@ -30,42 +30,40 @@ import Box from "@mui/material/Box";
 import BadgeMap from "./BadgeMap";
 
 const badgeIcon = {
-  AcUnitIconUsage : <AcUnitIcon />,
-  CodeIconUsage : <CodeIcon />,
-  TwoWheelerIconUsage : <TwoWheelerIcon />,
-  TerminalIconUsage : <TerminalIcon />,
-  FlagIconUsage : <FlagIcon />,
-  MedicalServicesIconUsage : <MedicalServicesIcon />,
-  HealingIconUsage : <HealingIcon />,
-  OutdoorGrillIconUsage : <OutdoorGrillIcon />,
-  DonutLargeIconUsage : <DonutLargeIcon />,
-  ExtensionIconUsage : <ExtensionIcon />,
-  SportsIconUsage : <SportsIcon />,
-  SportsMmaIconUsage : <SportsMmaIcon />,
-  SportsEsportsIconUsage : <SportsEsportsIcon />,
-  CakeIconUsage : <CakeIcon />,
-  RestaurantMenuIconUsage : <RestaurantMenuIcon />,
-  DownhillSkiingIconUsage : <DownhillSkiingIcon />,
-  HikingIconUsage : <HikingIcon />,
-  PrintIconUsage : <PrintIcon />,
-  DesignServicesIconUsage : <DesignServicesIcon />,
-  ManageSearchIconUsage : <ManageSearchIcon />,
-  ScubaDivingIconUsage : <ScubaDivingIcon />,
-  BorderAllIconUsage : <BorderAllIcon />,
-  BoltIconUsage : <BoltIcon />,
-  WysiwygIconUsage : <WysiwygIcon />
+  AcUnitIcon : <AcUnitIcon />,
+  CodeIcon : <CodeIcon />,
+  TwoWheelerIcon : <TwoWheelerIcon />,
+  TerminalIcon : <TerminalIcon />,
+  FlagIcon : <FlagIcon />,
+  MedicalServicesIcon : <MedicalServicesIcon />,
+  HealingIcon : <HealingIcon />,
+  OutdoorGrillIcon : <OutdoorGrillIcon />,
+  DonutLargeIcon : <DonutLargeIcon />,
+  ExtensionIcon : <ExtensionIcon />,
+  SportsIcon : <SportsIcon />,
+  SportsMmaIcon : <SportsMmaIcon />,
+  SportsEsportsIcon : <SportsEsportsIcon />,
+  CakeIcon : <CakeIcon />,
+  RestaurantMenuIcon : <RestaurantMenuIcon />,
+  DownhillSkiingIcon : <DownhillSkiingIcon />,
+  HikingIcon : <HikingIcon />,
+  PrintIcon : <PrintIcon />,
+  DesignServicesIcon : <DesignServicesIcon />,
+  ManageSearchIcon : <ManageSearchIcon />,
+  ScubaDivingIcon : <ScubaDivingIcon />,
+  BorderAllIcon : <BorderAllIcon />,
+  BoltIcon : <BoltIcon />,
+  WysiwygIcon : <WysiwygIcon />
 
   // other icons based on your status
 };
 
 const BadgesPill = (props) => {
-  const badges = BadgeData.Badges;
-  const numberOfBadges = props.number;
 
   const badgeMap = BadgeMap();
   const userBadgeList = props.badges;
-
   const userBadgeArray = [];
+  
   let count = 0;
 
   userBadgeList.forEach((badge, index) => {
@@ -84,8 +82,10 @@ const BadgesPill = (props) => {
   });
 
   return (
-    <Box sx={{ display: "block", justifyContent: "space-around" }}>
+    <Box sx={{ display: "flex", justifyContent: "space-around" }}>
       {userBadgeArray.map((item) => {
+
+        console.log(item.userBadge[0].icon);
         return (
           <Tooltip title={item.userBadge[0].title} variant="solid">
             <Chip
@@ -93,7 +93,7 @@ const BadgesPill = (props) => {
               color="neutral"
               size="lg"
               className={`cat-${item.userBadge[0].cat}`}
-              //startDecorator={badgeIcon[item.userBadge[0].icon]}
+              startDecorator={badgeIcon[item.userBadge[0].icon]}
               onClick={() =>
                 alert(
                   "You clicked the " +

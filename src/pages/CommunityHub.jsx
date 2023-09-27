@@ -1,7 +1,7 @@
 import React from "react";
 import EventCard from "../components/EventCard";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid"; 
 import Events from '../data/Events.json'
 
 const data = Events.Events;

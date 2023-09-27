@@ -14,6 +14,29 @@ export const getListAttributes = async () => {
   return await response;
 };
 
+export const getCountAttributes = async () => {
+  const dataSet = await fetch(`${apiUrl}/countAttributesByUser`);
+  const response = await dataSet.json();
+  return await response;
+};
+
+export const getCountMentorStatus = async () => {
+  const dataSet = await fetch(`${apiUrl}/countMentorStatus`);
+  const response = await dataSet.json();
+  return await response;
+};
+export const addUserAttributes = async (attributes) => {
+  const url=`${apiUrl}/addUserAttributes?sn=1&attributes=${attributes.toString()}`
+  console.log(url)
+  try {
+    const response = await fetch(url, {method: 'POST'})
+    console.log(response)
+    return await response;
+  } catch (error) {
+    console.error("Error", error);
+  }
+}
+
 
 export const getListUsersByAttributes = async (attributes) => {
   try {
