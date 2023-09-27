@@ -14,6 +14,18 @@ export const getListAttributes = async () => {
   return await response;
 };
 
+export const getCountAttributes = async () => {
+  const dataSet = await fetch(`${apiUrl}/countAttributesByUser`);
+  const response = await dataSet.json();
+  return await response;
+};
+
+export const getCountMentorStatus = async () => {
+  const dataSet = await fetch(`${apiUrl}/countMentorStatus`);
+  const response = await dataSet.json();
+  return await response;
+};
+
 
 export const getListUsersByAttributes = async (attributes) => {
   try {
