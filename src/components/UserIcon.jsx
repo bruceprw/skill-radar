@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import PersonIcon from "@mui/icons-material/Person";
@@ -14,17 +14,7 @@ import Tooltip from "@mui/material/Tooltip";
 import PersonAdd from "@mui/icons-material/PersonAdd";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
-
-{
-  /*<Stack direction="row" spacing={2}>
-      <Link to={"/profile"}>
-        <Avatar>
-          <PersonIcon />
-        </Avatar>
-      </Link>
-      <button onClick={props.onLogout}>Logout</button>
-    </Stack>*/
-}
+import AuthContext from "../store/auth-context";
 
 export default function IconAvatars(props) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -35,6 +25,10 @@ export default function IconAvatars(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const ctx = useContext(AuthContext);
+
+  const name = ctx.firstName + ' ' + ctx.lastName;
 
   return (
     <div>
@@ -48,7 +42,7 @@ export default function IconAvatars(props) {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32, backgroundColor: '#071C42'}}>
+            <Avatar sx={{ width: 32, height: 32, backgroundColor: "#071C42" }}>
               <PersonIcon />
             </Avatar>
           </IconButton>
@@ -64,11 +58,11 @@ export default function IconAvatars(props) {
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
         <MenuItem onClick={handleClose}>
-          <Link to={"/profile"}>
+          <Link to={"/profile"} style={{display: 'flex', alignItems: 'center'}} className="alternate">
             <ListItemIcon>
-              <Avatar />
+              <Avatar fontSize="small" />
             </ListItemIcon>
-            Profile
+            <div style={{marginLeft: '1em'}}>{name}</div>
           </Link>
         </MenuItem>
         <Divider />

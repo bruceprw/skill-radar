@@ -1,9 +1,22 @@
-import React from "react";
+import { React, useContext } from "react";
 import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import Avatar from '@mui/material/Avatar';
+import ProfileDetails from '../components/profile/ProfileDetails'
+import AuthContext from "../store/auth-context";
+
+
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  Divider,
+  Typography
+} from '@mui/material';
+
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -15,63 +28,74 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function BasicGrid() {
+  const ctx = useContext(AuthContext);
+  //console.log(ctx)
   return (
+    <>
+    <h2>{ctx.firstName}s Profile</h2>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <div>
-          <Grid item xs={12}>
+        <Grid container spacing={2} xs={12} md={12}>
+          <Grid item xs={4} md={4}>
+            <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+        <Avatar
+          src=''
+          sx={{
+            height: 80,
+            mb: 2,
+            width: 80
+          }}
+        />
+          <Divider />
+            <CardActions>
+              <Button
+                fullWidth
+                variant="text"
+              >
+                Upload picture
+              </Button>
+            </CardActions>
+            </Box>
+          
 
-            <Grid item xs={6}>
-              <div>
 
-              </div>
-              <Item>Picture 
-                <Avatar
-                  src='/public/assets/profile-images/NoProfilePic.png'
-                  sx={{
-                    height: 80,
-                    mb: 2,
-                    width: 80
-                  }}
-                />
-              </Item>
-            </Grid>
-            <Grid item xs={6}>
-              <Item>info</Item>
-            </Grid>
-            
           </Grid>
+          <Grid item xs={8} md={8}>
+            <ProfileDetails />
+          </Grid>
+        </Grid>
 
-          <Grid item xs={12}>
-            <Item>Intrests</Item>
-          </Grid>
-          <Grid item xs={12}>
-            <Item>skills</Item>
-          </Grid>
-          <Grid item xs={12}>
-            <Item>Qualifications</Item>
-          </Grid>
-            <Item>connections</Item>
-            <Item>xs=7</Item>
-          </div>
+        <Grid item xs={12}>
+        <Card>
+            <h3>Interests</h3>
+            </Card>
           
         </Grid>
-        
-        <Grid item xs={6}>
-          <div>
-          <Grid item xs={12}>
-          <h2>Badges</h2>
-            <Box>
-
-            </Box>
-          </Grid>
-          <Grid item xs={12}>
-            <Item>News Feed</Item>
-          </Grid> 
-          </div>
+        <Grid item xs={12}>
+          <Card>
+            <h3>Skills</h3>
+          </Card>
         </Grid>
+        <Grid item xs={12}>
+        <Card>
+            <h3>Qualifications</h3>
+        </Card>          
+        </Grid>
+        <Grid item xs={12}>
+        <Card>
+            <h3>Connections</h3>
+        </Card>          
+        </Grid>
+         
       </Grid>
-    </Box>
+      </Box>
+  </>
+      
   );
 }

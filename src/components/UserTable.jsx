@@ -3,18 +3,31 @@ import Alert from "@mui/material/Alert";
 import Skeleton from "@mui/material/Skeleton";
 import UserCard from "./UserCard";
 import Grid from "@mui/material/Grid";
+import LoadingLogo from "../assets/loading-logo";
 import { getListUsers, getListAttributes } from "../api";
 
 export default function UserTable() {
   let [userList, setUserList] = useState([]);
   let [attributeList, setAttributeList] = useState([]);
   let [isLoading, setIsLoading] = useState(true);
+  let [isError, setIsError] = useState(false);
+  let [showTable, setShowTable] = useState(false);
 
   useEffect(() => {
-    getListUsers().then((data) => {
-      setUserList(data);
-      setIsLoading(false);
-    });
+    getListUsers()
+      .then((data) => {
+        console.log('Fetched', data)
+        setUserList(data);
+        setTimeout(function () {
+          setIsLoading(false);
+          setShowTable(true)
+        }, 1500);
+      })
+      .catch((error) => {
+        setIsError(true);
+        setShowTable(false)
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -29,28 +42,23 @@ export default function UserTable() {
   return (
     <>
       {isLoading && (
-        <>
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-          <Skeleton
-            variant="rounded"
-            width={"98%"}
-            sx={{ marginRight: "1em", marginTop: "1em" }}
-            height={20}
-          />
-        </>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "50vh",
+          }}
+        >
+          <LoadingLogo colour={"#cccccc"} />
+        </div>
       )}
-      {!isLoading && (
+      {isError && (
+      <Alert severity="warning" sx={{ marginBottom: "1em" }}>
+        Data cannot be fetched!
+      </Alert>
+      )}
+      {showTable && (
         <>
           <Alert severity="info" sx={{ marginBottom: "1em" }}>
             The following people share similar interests. Connect now!

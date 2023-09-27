@@ -3,6 +3,7 @@ const apiUrl =
 
 export const getListUsers = async () => {
     const dataSet = await fetch(`${apiUrl}/listUsers`);
+    console.log('DATA', dataSet);
     const response = await dataSet.json();
     return await response;
 };

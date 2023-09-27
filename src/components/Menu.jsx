@@ -17,20 +17,23 @@ import MenuData from "../data/Menu.json";
 import UserIcon from "../components/UserIcon";
 import PersonIcon from "@mui/icons-material/Person";
 import AuthContext from "../store/auth-context";
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
 export default function Menu(props) {
-
   const ctx = useContext(AuthContext);
-  
+
   const location = useLocation();
   const menuItems = MenuData.Menu;
-  const userType = localStorage.getItem("userType");
+  const userType = ctx.userType;
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
     ForumIcon: <ForumIcon />,
     DashboardIcon: <DashboardIcon />,
+    MilitaryTechIcon: <MilitaryTechIcon />
+    
     // other icons based on your status
   };
 
@@ -39,6 +42,28 @@ export default function Menu(props) {
       <Box sx={{ width: "100%" }}>
         <nav aria-label="main mailbox folders">
           <List>
+            {userType == 3 && (
+              <Link to={'/commander-dashboard'}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Chip
+                        icon={<CrisisAlertIcon />}
+                        variant="outlined"
+                        sx={{
+                          backgroundColor: "#ccc",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Command Dash" />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            )}
             {menuItems.map((item) => {
               let selected = false;
 
