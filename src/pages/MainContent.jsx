@@ -6,6 +6,7 @@ import People from "./People";
 import Profile from "./Profile";
 import SkillSearch from "./SkillSearch"
 import SkillResults from './SkillResults';
+import CommandDash from './CommandDash';
 
 const MainContent = () => {
 
@@ -17,8 +18,9 @@ const MainContent = () => {
       <Route path={'/community'} element={<CommunityHub />} />
       <Route path={'/people'} element={<People />} />
       <Route path={'/profile'} element={<Profile />} />
-      <Route path={'/skill-search'} element={<SkillSearch setPassResults={setPassResults}/>}/>
-      <Route path={'/search-results'} element={<SkillResults passResults={passResults} />} />
+      <Route path={'/skill-search'} element={<SkillSearch />}/>
+      <Route path={'/search-results'} element={<SkillResults />} />
+      <Route path={'/commander-dashboard'} element={<CommandDash />} />
     </Routes>
   )
 // useState with setter in skill search and getting in skill results

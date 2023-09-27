@@ -35,7 +35,7 @@ const LogoFull = (props) => {
       <div style={{fontFamily: 'Poppins', fontWeight: 800, color: main_colour}}>
       Radar
       </div>
-      <RadarIcon sx={{fontSize: fontSize, color: second_colour}}/>
+      <RadarIcon sx={{fontSize: fontSize, color: second_colour}} className="logo-spin"/>
     </div>
   );
 };
