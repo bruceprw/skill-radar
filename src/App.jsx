@@ -16,13 +16,14 @@ function App() {
   const [userType, setUserType] = useState(false);
   const [firstName, setFirstName] = useState(false);
   const [lastName, setLastName] = useState(false);
+  const [userContact, setuserContact] = useState(false);
 
   useEffect(() => {
 
     const userEmail = localStorage.getItem("userEmail");
 
     if (userEmail) {
-
+      setuserContact(userEmail)
       loginHandler(userEmail, null);
 
     }
@@ -81,6 +82,7 @@ function App() {
         userType: userType,
         firstName: firstName,
         lastName: lastName,
+        userContact: userContact
       }}
     >
       {!isLoggedIn && <Login onLogin={loginHandler} />}
