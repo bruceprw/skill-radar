@@ -1,28 +1,3 @@
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import CodeIcon from '@mui/icons-material/Code';
-import TwoWheelerIcon from '@mui/icons-material/TwoWheeler';
-import TerminalIcon from '@mui/icons-material/Terminal';
-import FlagIcon from '@mui/icons-material/Flag';
-import MedicalServicesIcon from '@mui/icons-material/MedicalServices';
-import HealingIcon from '@mui/icons-material/Healing';
-import OutdoorGrillIcon from '@mui/icons-material/OutdoorGrill';
-import DonutLargeIcon from '@mui/icons-material/DonutLarge';
-import ExtensionIcon from '@mui/icons-material/Extension';
-import SportsIcon from '@mui/icons-material/Sports';
-import SportsMmaIcon from '@mui/icons-material/SportsMma';
-import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
-import CakeIcon from '@mui/icons-material/Cake';
-import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
-import DownhillSkiingIcon from '@mui/icons-material/DownhillSkiing';
-import HikingIcon from '@mui/icons-material/Hiking';
-import PrintIcon from '@mui/icons-material/Print';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-import ScubaDivingIcon from '@mui/icons-material/ScubaDiving';
-import BorderAllIcon from '@mui/icons-material/BorderAll';
-import BoltIcon from '@mui/icons-material/Bolt';
-import WysiwygIcon from '@mui/icons-material/Wysiwyg';
-
 const BadgeMap = () => {
 
  const map =[
