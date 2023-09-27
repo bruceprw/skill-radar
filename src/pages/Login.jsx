@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffec, createContext } from "react";
 
 import Card from "@mui/material/Card";
 import Button from "@mui/material/Button";
@@ -6,13 +6,18 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LogoFull from "../assets/logo-full";
 import TextField from "@mui/material/TextField";
-
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState("");
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+
+  const context = createContext()
+  const navigate = useNavigate();
 
   const emailChangeHandler = (event) => {
     setEnteredEmail(event.target.value);
@@ -43,6 +48,10 @@ const Login = (props) => {
     props.onLogin(enteredEmail, enteredPassword);
   };
 
+  const handleRegister = () => {
+   navigate("/onboarding");
+  }
+
   return (
     <Box
       className="secondary"
@@ -55,7 +64,7 @@ const Login = (props) => {
     >
       <Grid item xs={8} sx={{ marginTop: "5rem" }} className="secondary">
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <LogoFull fontSize={"3rem"}/>
+          <LogoFull fontSize={"3rem"} />
         </Box>
         <Card sx={{ padding: "2rem" }}>
           <form onSubmit={submitHandler}>
@@ -96,23 +105,29 @@ const Login = (props) => {
                 />
               </Box>
             </div>
-            Use any email and a 6 letter password
+            <Box
+              sx={{
+                "& > :not(style)": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+
+            </Box>
             <div>
               <Box
                 sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
+                  display: "flex",
+                  justifyContent: "center",
                   "& > :not(style)": { m: 1, width: "25ch" },
                 }}
-
               >
                 <Button
                   type="submit"
                   variant="contained"
                   color="success"
                   disabled={!formIsValid}
-
-                  sx={{width: '100%'}}
+                  sx={{ width: "100%" }}
                 >
                   Login
                 </Button>

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -10,40 +10,30 @@ import Divider from "@mui/material/Divider";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-import ForumIcon from '@mui/icons-material/Forum';
+import ForumIcon from "@mui/icons-material/Forum";
 import GroupsIcon from "@mui/icons-material/Groups";
 import { useLocation, Link } from "react-router-dom";
+import MenuData from "../data/Menu.json";
+import UserIcon from "../components/UserIcon";
+import PersonIcon from "@mui/icons-material/Person";
+import AuthContext from "../store/auth-context";
+import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 
-export default function Menu() {
+export default function Menu(props) {
+  const ctx = useContext(AuthContext);
+
   const location = useLocation();
-  const menuItems = [
-    {
-      to: "/",
-      text: "Dashboard",
-      icon: "DashboardIcon",
-    },
-    {
-      to: "/community",
-      text: "Community Hub",
-      icon: "ForumIcon",
-    },
-    {
-      to: "/people",
-      text: "People",
-      icon: "GroupsIcon",
-    },
-    {
-      to: "/skill-search",
-      text: "Skills Search",
-      icon: "GroupsIcon",
-    },
-  ];
+  const menuItems = MenuData.Menu;
+  const userType = ctx.userType;
 
   const statusIcon = {
     GroupsIcon: <GroupsIcon />,
     InboxIcon: <InboxIcon />,
     ForumIcon: <ForumIcon />,
-    DashboardIcon: <DashboardIcon />
+    DashboardIcon: <DashboardIcon />,
+    MilitaryTechIcon: <MilitaryTechIcon />
+    
     // other icons based on your status
   };
 
@@ -52,6 +42,50 @@ export default function Menu() {
       <Box sx={{ width: "100%" }}>
         <nav aria-label="main mailbox folders">
           <List>
+            {userType == 3 && (
+              <Link to={'/commander-dashboard'}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Chip
+                        icon={<CrisisAlertIcon />}
+                        variant="outlined"
+                        sx={{
+                          backgroundColor: "#ccc",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Command Dash" />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            )}
+            {userType != 1 && (
+              <Link to={'/skill-search'}>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Chip
+                        icon={<MilitaryTechIcon/>}
+                        variant="outlined"
+                        sx={{
+                          backgroundColor: "#ccc",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          paddingLeft: "0",
+                        }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText primary="Skills Search" />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            )}
             {menuItems.map((item) => {
               let selected = false;
 
@@ -72,7 +106,7 @@ export default function Menu() {
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            paddingLeft: '0'
+                            paddingLeft: "0",
                           }}
                         />
                       </ListItemIcon>
@@ -84,6 +118,37 @@ export default function Menu() {
             })}
           </List>
         </nav>
+        <Box
+          sx={{
+            display: { xs: "block", md: "none" },
+          }}
+        >
+          <Link to={"/profile"}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <Chip
+                    icon={<PersonIcon />}
+                    variant="outlined"
+                    sx={{
+                      backgroundColor: "#ccc",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      paddingLeft: "0",
+                    }}
+                  />
+                </ListItemIcon>
+                <ListItemText primary="Profile" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+          <ListItem disablePadding onClick={props.onLogout}>
+            <ListItemButton>
+              <ListItemText primary="Logout" />
+            </ListItemButton>
+          </ListItem>
+        </Box>
       </Box>
     </>
   );

@@ -23,7 +23,6 @@ import FlightIcon from '@mui/icons-material/Flight';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
-
 import CasinoIcon from '@mui/icons-material/Casino';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import TerminalIcon from '@mui/icons-material/Terminal';

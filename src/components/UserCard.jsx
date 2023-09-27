@@ -11,6 +11,7 @@ import CardActions from '@mui/joy/CardActions';
 import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import SvgIcon from '@mui/joy/SvgIcon';
+import UserBadges from './UserBadges';
 
 export default function UserCard(props) {
 
@@ -20,16 +21,16 @@ export default function UserCard(props) {
 
   const connections = randomIntFromInterval(2,9);
 
+  let imgUrl = 'https://picsum.photos/200/300?date=' + new Date().getTime();
+
   return (
     <Card
       sx={{
-        width: 320,
         maxWidth: '100%',
-        boxShadow: 'lg',
       }}
     >
       <CardContent sx={{ alignItems: 'center', textAlign: 'center' }}>
-        <Avatar src="/static/images/avatar/1.jpg" sx={{ '--Avatar-size': '4rem' }} />
+        <Avatar src={imgUrl} sx={{ '--Avatar-size': '4rem' }} />
         <Chip
           size="sm"
           variant="soft"
@@ -45,6 +46,8 @@ export default function UserCard(props) {
         </Chip>
         <Typography level="title-lg">{props.title}</Typography>
       </CardContent>
+      <UserBadges />
+
       <CardOverflow sx={{ bgcolor: 'background.level1' }}>
         <CardActions buttonFlex="1">
           <ButtonGroup variant="outlined" sx={{ bgcolor: 'background.surface' }}>
