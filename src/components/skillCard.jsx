@@ -1,6 +1,7 @@
 import { Card, CardContent, Typography } from '@mui/material';
 
 export const SkillCard = (props) => {
+  
   return (
     <Card
       sx={{
