@@ -54,13 +54,6 @@ const SkillResults = ({passResults}) => {
                     <SkillResultsTable passResults={passResults} />
 
                 </Stack>
-            {/* <Stack>
-                    <Button
-                        variant="contained"
-                    >
-                        Email selected users tasking chain
-                    </Button>
-            </Stack> */}
         </Container>
         </>
      );

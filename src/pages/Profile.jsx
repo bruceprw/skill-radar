@@ -74,17 +74,20 @@ export default function BasicGrid() {
         <Grid item xs={12}>
         <Card>
             <h3>Interests</h3>
+              Motor Biking, C++
             </Card>
           
         </Grid>
         <Grid item xs={12}>
           <Card>
             <h3>Skills</h3>
+              Poached Eggs
           </Card>
         </Grid>
         <Grid item xs={12}>
         <Card>
             <h3>Qualifications</h3>
+            BSc Computer Science
         </Card>          
         </Grid>
         <Grid item xs={12}>
