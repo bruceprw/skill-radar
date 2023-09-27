@@ -63,7 +63,7 @@ function App() {
               className="greyscale"
               sx={{ height: "auto", display: { xs: "none", md: "block" } }}
             >
-              <Box>
+              <Box sx={{ height: "100vh"}} >
                 <LeftColumn onLogout={logoutHandler}/>
               </Box>
             </Grid>
