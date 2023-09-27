@@ -55,7 +55,7 @@ const Login = (props) => {
     >
       <Grid item xs={8} sx={{ marginTop: "5rem" }} className="secondary">
         <Box sx={{ display: "flex", justifyContent: "center" }}>
-          <LogoFull fontSize={"3rem"}/>
+          <LogoFull fontSize={"3rem"} />
         </Box>
         <Card sx={{ padding: "2rem" }}>
           <form onSubmit={submitHandler}>
@@ -96,23 +96,32 @@ const Login = (props) => {
                 />
               </Box>
             </div>
-            Use any email and a 6 letter password
+            <Box
+              sx={{
+                "& > :not(style)": { m: 1, width: "25ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <p>
+                Use luke, jake or ben @test.com as email and any 6 letter
+                password
+              </p>
+            </Box>
             <div>
               <Box
                 sx={{
-                  display: 'flex',
-                  justifyContent: 'center',
+                  display: "flex",
+                  justifyContent: "center",
                   "& > :not(style)": { m: 1, width: "25ch" },
                 }}
-
               >
                 <Button
                   type="submit"
                   variant="contained"
                   color="success"
                   disabled={!formIsValid}
-
-                  sx={{width: '100%'}}
+                  sx={{ width: "100%" }}
                 >
                   Login
                 </Button>

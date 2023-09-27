@@ -25,20 +25,32 @@ function App() {
   }, []);
 
   const loginHandler = (email, password) => {
+    let userType = 0;
 
-    if (email == 'luke@test.com') {
-
-      setUserType(1);
-      localStorage.setItem("userType", "1");
-
+    if (email == "luke@test.com") {
+      userType = 1;
     }
-    console.log(email, password);
-    localStorage.setItem("isLoggedIn", "1");
-    setLoggedIn(true);
+
+    if (email == "jake@test.com") {
+      userType = 2;
+    }
+
+    if (email == "jake@test.com") {
+      userType = 3;
+    }
+
+    localStorage.setItem("userType", userType);
+
+    if (userType) {
+      setUserType(userType);
+
+      localStorage.setItem("isLoggedIn", "1");
+      setLoggedIn(true);
+    }
   };
 
   const logoutHandler = () => {
-    console.log('LOGOUT')
+    console.log("LOGOUT");
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userType");
 
@@ -47,13 +59,15 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ isLoggedIn: false }}>
+
       {!isLoggedIn && <Login onLogin={loginHandler} />}
+
       {isLoggedIn && (
         <Router>
           <Grid container spacing={2}>
             <Grid item xs={12} className="secondary">
               <Box>
-                <Header onLogout={logoutHandler}/>
+                <Header onLogout={logoutHandler} />
               </Box>
             </Grid>
             <Grid
@@ -63,8 +77,8 @@ function App() {
               className="greyscale"
               sx={{ height: "auto", display: { xs: "none", md: "block" } }}
             >
-              <Box>
-                <LeftColumn onLogout={logoutHandler}/>
+              <Box sx={{ height: "100vh" }}>
+                <LeftColumn onLogout={logoutHandler} />
               </Box>
             </Grid>
             <Grid
@@ -72,9 +86,12 @@ function App() {
               xs={12}
               sm={12}
               md={9}
-              sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" },  padding: { xs: "unset", md: "0 1em 0 0" } }}
+              sx={{
+                margin: { xs: "0 2em 0 2em", md: "0 auto" },
+                padding: { xs: "unset", md: "0 1em 0 0" },
+              }}
             >
-              <Box>
+              <Box sx={{ height: { xs: "100vh" } }}>
                 <MainContent />
                 <Box
                   className="secondary"
