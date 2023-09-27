@@ -1,0 +1,50 @@
+{
+    "Badges":[
+        {
+            "text": "Parachuting",
+            "class": "primary",
+            "icon": "ParaglidingIcon"
+          },
+          {
+            "text": "Flying",
+            "class": "primary",
+            "icon": "FlightIcon"
+          },
+          {
+            "text": "PHP",
+            "class": "secondary",
+            "icon": "PhpIcon"
+          },
+          {
+            "text": "Javascript",
+            "class": "secondary",
+            "icon": "JavascriptIcon"
+          },
+          {
+            "text": "Running",
+            "class": "alternate",
+            "icon": "DirectionsRunIcon"
+          },
+          {
+            "text": "Cycling",
+            "class": "alternate",
+            "icon": "DirectionsBikeIcon"
+          },
+          {
+            "text": "Golf",
+            "class": "alternate",
+            "icon": "GolfCourseIcon"
+          },
+          {
+            "text": "Photography",
+            "class": "secondary",
+            "icon": "LocalSeeIcon"
+          },
+          {
+            "text": "Snowboarding",
+            "class": "alternate",
+            "icon": "SnowboardingIcon"
+          }
+    ]
+}
+

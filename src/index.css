@@ -105,8 +105,42 @@ ul a:hover .MuiChip-outlined {
   animation: logo-spin infinite 5s linear;
 }
 
+.MuiChip-root.primary {
+  color: rgb(255, 255, 255);
+}
+
+.MuiChip-root.secondary {
+  color: white;
+}
+
+.MuiChip-root.alternate {
+  color: rgb(57, 57, 57);
+}
+
+.MuiChip-root.primary button.MuiChip-action {
+  background-color: rgb(0, 82, 190);
+}
+
+.MuiChip-root.secondary button.MuiChip-action {
+  background-color: rgb(57, 57, 57);
+}
+
+.MuiChip-root.alternate button.MuiChip-action {
+  background-color: rgb(89, 214, 122);
+}
+
+.MuiChip-root button.MuiChip-action {
+
+  border-color: transparent;
+
+}
+
 .logo-spin.fast {
   animation: logo-spin infinite 1s linear;
+}
+
+#footer {
+  z-index: 999;
 }
 
 @keyframes logo-spin {
