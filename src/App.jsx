@@ -86,7 +86,6 @@ function App() {
       {!isLoggedIn && <Login onLogin={loginHandler} />}
 
       {isLoggedIn && (
-        <Router>
           <Grid container spacing={2}>
             <Grid item xs={12} className="secondary">
               <Box>
@@ -132,7 +131,6 @@ function App() {
               </Box>
             </Grid>
           </Grid>
-        </Router>
       )}
     </AuthContext.Provider>
   );
