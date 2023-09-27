@@ -10,7 +10,6 @@ import MainContent from "./pages/MainContent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
     <Router>
       <Grid container spacing={2}>
@@ -19,14 +18,38 @@ function App() {
             <Header />
           </Box>
         </Grid>
-        <Grid item xs={0} sm={3} className="greyscale" sx={{ height: "100vh", display: { xs: 'none', md: 'block' } }}>
+        <Grid
+          item
+          xs={0}
+          sm={3}
+          className="greyscale"
+          sx={{ height: "100vh", display: { xs: "none", md: "block" } }}
+        >
           <Box>
             <LeftColumn />
           </Box>
         </Grid>
-        <Grid item xs={12} sm={9} sx={{margin: { xs: '0 2em 0 2em', md: '0 auto' } }}> 
+        <Grid
+          item
+          xs={12}
+          sm={9}
+          sx={{ margin: { xs: "0 2em 0 2em", md: "0 auto" } }}
+        >
           <Box>
             <MainContent />
+            <Box
+              className="secondary"
+              sx={{
+                position: "fixed",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                textAlign: "center",
+                padding: "0.5em",
+              }}
+            >
+              © 2023 - Hackathon 22 | Team 9
+            </Box>
           </Box>
         </Grid>
       </Grid>

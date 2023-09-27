@@ -44,7 +44,7 @@ export default function Menu() {
 
               return (
                 <Link to={item.to} key={item.to}>
-                  <ListItem disablePadding>
+                  <ListItem disablePadding >
                     <ListItemButton selected={selected}>
                       <ListItemIcon>ICON</ListItemIcon>
                       <ListItemText primary={item.text} />
