@@ -2,25 +2,44 @@ import React, { useState } from 'react';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
 import { Box, Card, InputAdornment, OutlinedInput, SvgIcon, Button, FormControl, Select, MenuItem, Checkbox, ListItemText, Input, InputLabel, Chip, Autocomplete, TextField } from '@mui/material';
 import {useNavigate} from 'react-router-dom';
-
-export const SkillSearchSection = () => {
+import { getListUsersByAttributes } from '../api';
+export const SkillSearchSection = ({setPassResults}) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
+  const [selectedIndexes, setSelectedIndexes] = useState([])
   const navigate=useNavigate();
 
   const handleSkillChange = (newValue) => {
     setSelectedSkills(newValue);
+    handleIndexes(newValue);
+  };
+
+   const handleIndexes = (value) => {
+    setSelectedIndexes(value.map((v) => skills.indexOf(v) + 1));
   };
 
   const removeSkill = (skill) => {
     setSelectedSkills((prevSkills) => prevSkills.filter((s) => s !== skill));
   };
 
-  const startSearch = () => {
+  const startSearch = async () => {
+    const results = await(getListUsersByAttributes(selectedIndexes));
+    setPassResults(results)
     navigate("/search-results")
     
   };
 
-  const skills = ["Python", "Archery"];
+  const skills = [
+                    "Python Programming",
+                    "Motor Biking",
+                    "C++ Programming",
+                    "French Language",
+                    "Spanish Language",
+                    "First Aider",
+                    "Physiotherapist",
+                    "Chef",
+                    "Power BI",
+                    "Figma"
+                  ];
 
   return (
     <Box>
