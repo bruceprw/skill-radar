@@ -14,6 +14,7 @@ const CommandDash = () => {
 
   let [isError, setIsError] = useState(false);
   let [showTable, setShowTable] = useState(false);
+  let [isLoading, setIsLoading] = useState(true);
   let [countAttributes, setCountAttributes] = useState(false);
   //let [countAttributes, setCountAttributes] = useState(false);
 
@@ -33,15 +34,12 @@ const CommandDash = () => {
       });
   }, []);
 
-  console.log(countAttributes);
-
   return (
     <>
     {userType == 3 && (
       <Box sx={{ maxWidth: "100%" }}>
         <h2>Commander Dashboard</h2>
-        <p>Super Admin Function Here</p>
-        <Bar />
+        <Bar data={countAttributes}  isLoading={isLoading} />
       </Box>
     )}
     {userType != 3 && (

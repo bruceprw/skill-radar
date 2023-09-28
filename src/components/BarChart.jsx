@@ -1,44 +1,71 @@
-import ResizableBox from "./ResizableBox"
-import useDemoConfig from "./useDemoConfig"
-import React from "react"
-import { Chart } from "react-charts"
+import ResizableBox from "./ResizableBox";
+import useDemoConfig from "./useDemoConfig";
+import React from "react";
+import { Chart } from "react-charts";
+import LoadingLogo from "../assets/loading-logo";
 
-export default function Bar() {
-  const { data, randomizeData } = useDemoConfig({
-    series: 3,
-    dataType: "ordinal"
-  })
+export default function Bar(props) {
+  const isLoading = props.isLoading;
+
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "50vh",
+        }}
+      >
+        <LoadingLogo colour={"#cccccc"} />
+      </div>
+    );
+  }
 
   const primaryAxis = React.useMemo(
     () => ({
-      getValue: datum => datum.primary
+      getValue: (datum) => datum.primary,
     }),
     []
-  )
+  );
 
   const secondaryAxes = React.useMemo(
     () => [
       {
-        getValue: datum => datum.secondary
-      }
+        getValue: (datum) => datum.secondary,
+      },
     ],
     []
-  )
+  );
+
+  const chartdata = props.data;
+
+  const renderedData = chartdata.map((dataArray) => ({
+    primary: dataArray.name,
+    secondary: dataArray.count,
+  }));
+
+  const data = [
+    {
+      label: "Series 1",
+      data: renderedData,
+      color: "#ff0000",
+    },
+  ];
 
   return (
     <>
-      <button onClick={randomizeData}>Randomize Data</button>
-      <br />
-      <br />
-      <ResizableBox>
+      <div style={{ width: "100%", height: "400px" }}>
         <Chart
           options={{
+            defaultColors: ["#3dcab1"],
             data,
             primaryAxis,
-            secondaryAxes
+            secondaryAxes,
           }}
+          style={{ width: "100%" }}
         />
-      </ResizableBox>
+      </div>
     </>
-  )
+  );
 }

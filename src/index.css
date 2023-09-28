@@ -195,6 +195,25 @@ ul a:hover .MuiChip-outlined {
   outline-color: rgb(149,149,149);
 }
 
+button.cat-1  {
+  color: red;
+  background-color: rgb(0, 82, 190);
+}
+
+button.cat-2  {
+  color: cyan;
+  background-color: rgb(0, 82, 190);
+}
+
+button.cat-3  {
+  color: pink;
+  background-color: rgb(0, 82, 190);
+}
+
+button.cat-1  {
+  color: aqua;
+  background-color: rgb(0, 82, 190);
+}
 
 
 .MuiChip-root button.MuiChip-action {
