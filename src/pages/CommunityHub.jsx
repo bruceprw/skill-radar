@@ -1,12 +1,15 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import EventCard from "../components/EventCard";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid"; 
 import Events from '../data/Events.json'
+import { getCountAttributes } from "../api";
 
 const data = Events.Events;
 
 const CommunityHub = () => {
+
+
   return (
     <div>
       <h2>Community Hub</h2>

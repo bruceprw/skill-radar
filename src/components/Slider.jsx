@@ -64,11 +64,10 @@ export default function SlideComponent() {
             fontWeight="lg"
             mb={1}
           >
-            This is the modal title
+            Here is some more information
           </Typography>
           <Typography id="modal-desc" textColor="text.tertiary">
-            Make sure to use <code>aria-labelledby</code> on the modal dialog
-            with an optional <code>aria-describedby</code> attribute.
+            Information on this job will be displayed here.
           </Typography>
         </Sheet>
       </Modal>

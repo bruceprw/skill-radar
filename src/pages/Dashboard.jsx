@@ -28,8 +28,41 @@ const Dashboard = () => {
           severity="warning"
           sx={{ marginBottom: "1em", marginRight: "1em" }}
         >
-          You are a super-duper admin
+          You are a super admin
         </Alert>
+      )}
+      {userType == 1 && (
+        
+        <Box
+        sx={{
+          marginBottom: "1em",
+          width: "auto",
+          display: "flex",
+          alignItems: "center",
+          background: "#3fcab1",
+          borderRadius: "10px",
+          color: 'white',
+          padding: "1em",
+        }}
+      >
+        <div style={{ display: "flex", alignContent: "center" }}>
+          <div
+            style={{ display: "flex", marginRight: "0.25em" }}
+          >
+          <Button
+            sx={{ mt: 2, mb: 2, ml: 2 }}
+            onClick={() => navigate("/onboarding")}
+            variant="contained"
+            color="blue"
+          >
+            Complete Onboarding
+          </Button>
+          </div>
+          <div style={{ display: "inline", alignSelf: "center", marginLeft: '1em' }}>
+            Welcome to SkillRadar. Please let us know your skills and interests.
+          </div>
+        </div>
+      </Box>
       )}
       <Box
         sx={{
@@ -42,34 +75,19 @@ const Dashboard = () => {
           padding: "1em",
         }}
       >
-        <div style={{ display: "flex", alignContent: 'center' }}>
-          <div style={{ display: 'flex', fontSize: "2rem", marginRight: '0.25em' }}>🔥</div>
-          <div style={{ display: "inline", alignSelf: 'center' }}>
+        <div style={{ display: "flex", alignContent: "center" }}>
+          <div
+            style={{ display: "flex", fontSize: "2rem", marginRight: "0.25em" }}
+          >
+            🔥
+          </div>
+          <div style={{ display: "inline", alignSelf: "center" }}>
             Check out these hot skills in&nbsp;<b>Defence</b>&nbsp;needed&nbsp;
             <b>right now</b>
             &nbsp;and register your interest!
           </div>
         </div>
       </Box>
-      {userType == 1 && (
-        <Stack
-          direction={{ xs: "column", sm: "row" }}
-          spacing={{ xs: 1, sm: 2, md: 4 }}
-        >
-          <Alert severity="warning" sx={{ marginBottom: "1em" }}>
-            Add your Interests!
-            <br />
-            <Button
-              sx={{ mt: 2, mb: 2, ml: 2 }}
-              onClick={() => navigate("/onboarding")}
-              variant="contained"
-              color="blue"
-            >
-              Onboarding
-            </Button>
-          </Alert>
-        </Stack>
-      )}
       <Box sx={{ maxWidth: "100%" }}>
         <SlideComponent />
       </Box>

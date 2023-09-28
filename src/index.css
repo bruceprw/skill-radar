@@ -107,36 +107,36 @@ ul a:hover .MuiChip-outlined {
 
 button.cat-1 {
   background-color: rgb(185, 242, 179);
-  outline-color: rgb(41,176,25);
+  color: rgb(41,176,25);
 }
 button.cat-2 {
-  background-color: rgb(143, 237, 167);
-  outline-color: rgb(5, 149, 0);
+  background-color: rgb(255,255,255);
+  color: rgb(0,0,0);
 }
 
 button.cat-3 {
   background-color: rgb(228,192,255);
-  outline-color: rgb(145,0,255 );
+  color: rgb(145,0,255 );
 }
 
 button.cat-4 {
   background-color: rgb(255,251,183);
-  outline-color: rgb(229,218,67);
+  color: rgb(229,218,67);
 }
 
 button.cat-5 {
   background-color: rgb(210,226,255);
-  outline-color: rgb(148,184,255);
+  color: rgb(148,184,255);
 }
 
 button.cat-6 {
   background-color: rgb(239,203,203);
-  outline-color: rgb(198,0,0);
+  color: rgb(198,0,0);
 }
 
 button.cat-7 {
   background-color: rgb(45,81,198);
-  outline-color: rgb(0,255,230);
+  color: rgb(0,255,230);
 }
 
 button.cat-8 {
@@ -146,12 +146,12 @@ button.cat-8 {
 
 button.cat-9 {
   background-color: rgb(0, 82, 190);
-  outline-color: rgb(255,0,0);
+  color: rgb(255,0,0);
 }
 
 button.cat-10 {
   background-color: rgb(232,209,209);
-  outline-color: rgb(149,149,149);
+  border-color: rgb(149,149,149);
 }
 
 .logo-spin.fast {
