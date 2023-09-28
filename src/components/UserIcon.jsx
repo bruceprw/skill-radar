@@ -66,12 +66,6 @@ export default function IconAvatars(props) {
           </Link>
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon>
-            <Settings fontSize="small" />
-          </ListItemIcon>
-          Settings
-        </MenuItem>
         <MenuItem onClick={props.onLogout}>
           <ListItemIcon>
             <Logout fontSize="small" />

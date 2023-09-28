@@ -52,7 +52,6 @@ export default function UserCard(props) {
       <CardOverflow sx={{ bgcolor: 'background.level1' }}>
         <CardActions buttonFlex="1">
           <ButtonGroup variant="outlined" sx={{ bgcolor: 'background.surface' }}>
-            <Button>Message</Button>
             <Button>Connect</Button>
           </ButtonGroup>
         </CardActions>
