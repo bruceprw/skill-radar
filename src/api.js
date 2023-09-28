@@ -26,7 +26,7 @@ export const getCountMentorStatus = async () => {
   return await response;
 };
 export const addUserAttributes = async (attributes) => {
-  const url=`${apiUrl}/addUserAttributes?sn=1&attributes=${attributes.toString()}`
+  const url=`${apiUrl}/addUserAttributes?sn=1&attributes=1,2}`
   console.log(url)
   try {
     const response = await fetch(url, {method: 'POST'})

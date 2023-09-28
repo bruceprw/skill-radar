@@ -42,7 +42,7 @@ const BadgesPill = (props) => {
                 alert(
                   "You clicked the " +
                     item.userBadge[0].title +
-                    " badge for more info!"
+                    " badge for more info!" 
                 )
               }
             >

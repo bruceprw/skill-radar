@@ -6,6 +6,12 @@
   height: 100%; /* remove this line to see div.app is no more 100% height */
 }
 
+.gallery {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

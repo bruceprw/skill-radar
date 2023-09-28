@@ -11,7 +11,7 @@ import CardActions from '@mui/joy/CardActions';
 import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import SvgIcon from '@mui/joy/SvgIcon';
-import UserBadges from './UserBadges';
+import UserBadges from './UserBadges'; 
 
 export default function UserCard(props) {
 
@@ -46,6 +46,7 @@ export default function UserCard(props) {
         </Chip>
         <Typography level="title-lg">{props.title}</Typography>
       </CardContent>
+      
       <UserBadges badges={props.badges}/>
 
       <CardOverflow sx={{ bgcolor: 'background.level1' }}>

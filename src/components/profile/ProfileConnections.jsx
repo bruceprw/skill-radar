@@ -3,6 +3,8 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import AuthContext from "../../store/auth-context";
+import Chip from "@mui/material/Chip";
+import Connection from './ProfileConnectionAvatar'
 
 import {
   Avatar,
@@ -14,6 +16,9 @@ import {
   Divider,
   Typography
 } from '@mui/material';
+
+
+
 
 
 export default function AccountConnections(props) {
@@ -30,6 +35,7 @@ export default function AccountConnections(props) {
           gutterBottom
           variant="h5"
         >         
+        <Connection />
         </Typography>
       </Box>  
   );
