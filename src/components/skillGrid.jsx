@@ -9,7 +9,7 @@ const SkillGrid = () => {
     { title: 'Java', description: 'Dork code' },
   ];
 
-  let [isLoading, setIsLoading] = useState(true);
+  /*let [isLoading, setIsLoading] = useState(true);
   let [countAttributes, setCountAttributes] = useState(false);
   let [countMentorStatus, setCountMentorStatus] = useState(false);
 
@@ -27,7 +27,7 @@ const SkillGrid = () => {
         setShowTable(false)
         setIsLoading(false);
       });
-  }, []);
+  }, []);*/
 
   return (
     <Grid container spacing={2}>
