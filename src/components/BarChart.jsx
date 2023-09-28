@@ -2,12 +2,24 @@ import ResizableBox from "./ResizableBox";
 import useDemoConfig from "./useDemoConfig";
 import React from "react";
 import { Chart } from "react-charts";
+import LoadingLogo from "../assets/loading-logo";
 
 export default function Bar(props) {
   const isLoading = props.isLoading;
 
   if (isLoading) {
-    return;
+    return (
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "50vh",
+        }}
+      >
+        <LoadingLogo colour={"#cccccc"} />
+      </div>
+    );
   }
 
   const primaryAxis = React.useMemo(
@@ -37,21 +49,21 @@ export default function Bar(props) {
     {
       label: "Series 1",
       data: renderedData,
-      color: "#ff0000"
+      color: "#ff0000",
     },
   ];
 
   return (
     <>
-      <div style={{width: '100%', height: '400px'}}>
+      <div style={{ width: "100%", height: "400px" }}>
         <Chart
           options={{
-            defaultColors: [ '#3dcab1'],
+            defaultColors: ["#3dcab1"],
             data,
             primaryAxis,
             secondaryAxes,
           }}
-          style={{width: '100%'}}
+          style={{ width: "100%" }}
         />
       </div>
     </>

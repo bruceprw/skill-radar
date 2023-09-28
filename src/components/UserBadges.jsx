@@ -1,60 +1,11 @@
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import CodeIcon from "@mui/icons-material/Code";
-import TwoWheelerIcon from "@mui/icons-material/TwoWheeler";
-import TerminalIcon from "@mui/icons-material/Terminal";
-import FlagIcon from "@mui/icons-material/Flag";
-import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
-import HealingIcon from "@mui/icons-material/Healing";
-import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
-import DonutLargeIcon from "@mui/icons-material/DonutLarge";
-import ExtensionIcon from "@mui/icons-material/Extension";
-import SportsIcon from "@mui/icons-material/Sports";
-import SportsMmaIcon from "@mui/icons-material/SportsMma";
-import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
-import CakeIcon from "@mui/icons-material/Cake";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-import DownhillSkiingIcon from "@mui/icons-material/DownhillSkiing";
-import HikingIcon from "@mui/icons-material/Hiking";
-import PrintIcon from "@mui/icons-material/Print";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import ManageSearchIcon from "@mui/icons-material/ManageSearch";
-import ScubaDivingIcon from "@mui/icons-material/ScubaDiving";
-import BorderAllIcon from "@mui/icons-material/BorderAll";
-import BoltIcon from "@mui/icons-material/Bolt";
-import WysiwygIcon from "@mui/icons-material/Wysiwyg";
 import Chip from "@mui/joy/Chip";
 import Tooltip from "@mui/joy/Tooltip";
 import Box from "@mui/material/Box";
+import IconButton from "@mui/joy/IconButton";
+
+import * as Muicon from "@mui/icons-material";
 
 import BadgeMap from "./BadgeMap";
-
-const badgeIcon = {
-  AcUnitIcon: <AcUnitIcon />,
-  CodeIcon: <CodeIcon />,
-  TwoWheelerIcon: <TwoWheelerIcon />,
-  TerminalIcon: <TerminalIcon />,
-  FlagIcon: <FlagIcon />,
-  MedicalServicesIcon: <MedicalServicesIcon />,
-  HealingIcon: <HealingIcon />,
-  OutdoorGrillIcon: <OutdoorGrillIcon />,
-  DonutLargeIcon: <DonutLargeIcon />,
-  ExtensionIcon: <ExtensionIcon />,
-  SportsIcon: <SportsIcon />,
-  SportsMmaIcon: <SportsMmaIcon />,
-  SportsEsportsIcon: <SportsEsportsIcon />,
-  CakeIcon: <CakeIcon />,
-  RestaurantMenuIcon: <RestaurantMenuIcon />,
-  DownhillSkiingIcon: <DownhillSkiingIcon />,
-  HikingIcon: <HikingIcon />,
-  PrintIcon: <PrintIcon />,
-  DesignServicesIcon: <DesignServicesIcon />,
-  ManageSearchIcon: <ManageSearchIcon />,
-  ScubaDivingIcon: <ScubaDivingIcon />,
-  BorderAllIcon: <BorderAllIcon />,
-  BoltIcon: <BoltIcon />,
-  WysiwygIcon: <WysiwygIcon />,
-
-};
 
 const BadgesPill = (props) => {
   const badgeMap = BadgeMap();
@@ -70,7 +21,6 @@ const BadgesPill = (props) => {
 
     if (badge.id) {
       let userBadge = badgeMap.filter((p) => p.id == badge.id);
-
       userBadgeArray.push({ userBadge });
     }
 
@@ -80,15 +30,14 @@ const BadgesPill = (props) => {
   return (
     <Box sx={{ display: "flex", justifyContent: "center" }}>
       {userBadgeArray.map((item) => {
+        const Icon = Muicon[item.userBadge[0].icon];
+
         return (
           <Tooltip title={item.userBadge[0].title} variant="solid">
-            <Chip
-              sx={{ margin: "0 5px" }}
-              variant="outlined"
-              color="neutral"
-              size="lg"
+            <IconButton
+              sx={{mx: "3px" }}
+              variant="solid"
               className={`cat-${item.userBadge[0].cat}`}
-              startDecorator={badgeIcon[item.userBadge[0].icon]}
               onClick={() =>
                 alert(
                   "You clicked the " +
@@ -96,11 +45,14 @@ const BadgesPill = (props) => {
                     " badge for more info!"
                 )
               }
-            ></Chip>
+            >
+              <Icon fontSize="medium" sx={{ p: "0.2em"}} />
+            </IconButton>
           </Tooltip>
         );
       })}
     </Box>
+    
   );
 };
 

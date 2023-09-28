@@ -43,8 +43,8 @@ const Dashboard = () => {
         }}
       >
         <div style={{ display: "flex", alignContent: 'center' }}>
-          <div style={{ fontSize: "2rem", marginRight: '0.25em' }}>🔥</div>
-          <div style={{ display: "inline" }}>
+          <div style={{ display: 'flex', fontSize: "2rem", marginRight: '0.25em' }}>🔥</div>
+          <div style={{ display: "inline", alignSelf: 'center' }}>
             Check out these hot skills in&nbsp;<b>Defence</b>&nbsp;needed&nbsp;
             <b>right now</b>
             &nbsp;and register your interest!
@@ -70,9 +70,6 @@ const Dashboard = () => {
           </Alert>
         </Stack>
       )}
-      <Alert severity="info" sx={{ marginBottom: "1em", width: "auto" }}>
-        Check out the hot skills in Defence needed right now.
-      </Alert>
       <Box sx={{ maxWidth: "100%" }}>
         <SlideComponent />
       </Box>
