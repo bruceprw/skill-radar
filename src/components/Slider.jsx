@@ -9,11 +9,11 @@ import Sheet from "@mui/joy/Sheet";
 import Box from "@mui/material/Box";
 
 export default function SlideComponent() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const modalHandler = () => {
     console.log("TEATA");
-    setOpen(1);
+    setOpen(true);
   };
 
   const slides = SlideData.Events;
