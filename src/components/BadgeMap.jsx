@@ -1,4 +1,11 @@
+
+
+
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import TerminalIcon from '@mui/icons-material/Terminal';
+
 const BadgeMap = () => {
+  
 
  const map =[
   {"id": "1", "cat":"1", "title":"Python Programming", "icon":"Code"},

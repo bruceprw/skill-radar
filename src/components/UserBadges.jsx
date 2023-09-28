@@ -14,6 +14,9 @@ const BadgesPill = (props) => {
 
   let count = 0;
 
+  userBadge
+
+
   userBadgeList.forEach((badge, index) => {
     if (count == 3) {
       return;
@@ -42,7 +45,7 @@ const BadgesPill = (props) => {
                 alert(
                   "You clicked the " +
                     item.userBadge[0].title +
-                    " badge for more info!"
+                    " badge for more info!" 
                 )
               }
             >

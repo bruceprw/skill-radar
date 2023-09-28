@@ -15,6 +15,11 @@ import {
   Typography
 } from '@mui/material';
 
+const Permissions = {
+  "1":"Admin",
+  "2":"Super User",
+  "3":"User"
+}
 
 export default function AccountInformation(props) {
   const ctx = useContext(AuthContext);
@@ -62,7 +67,7 @@ export default function AccountInformation(props) {
           variant="body2"
         >
           <p>Account Permission:</p>  
-          <p><strong>{ctx.userType}</strong></p>
+          <p><strong>{Permissions[ctx.userType]}</strong></p>
         </Typography>
         </Box>
       </Box>
