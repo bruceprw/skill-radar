@@ -13,10 +13,17 @@ const CommunityHub = () => {
       <Grid container spacing={2}>
         {data.map((card) => (
           <Grid item xs={12} md={4}>
-            <EventCard title={card.title} content={card.content} logo={card.logo} desc={card.description} attendance={card.attendance}/>
+            <EventCard id={card.id} title={card.title} content={card.content} logo={card.logo} desc={card.description} attendance={card.attendance}/>
           </Grid>
         ))}
       </Grid>
+      <Box 
+      sx={{
+        width: 100,
+        height: 100}}>
+            <h3></h3>
+            
+        </Box>      
     </div>
   );
 };

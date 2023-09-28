@@ -9,31 +9,7 @@
             "attendance": "30"
         },
         {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "27/03/2019",
-            "description": "Learn to code, from 0 to hero in Python, C#, Java and much much more",
-            "logo": ["Code"],
-            "title": "Programming Event",
-            "attendance": "10"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "27/03/2019",
-            "description": "Fly a drone, new commers welcome.",
-            "logo": ["Flight"],
-            "title": "Drone Flying",
-            "attendance": "2"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "27/03/2019",
-            "description": "Geek out with a newly established gaming group for dungeons and dragons.",
-            "logo": ["Casino"],
-            "title": "Dungeons And Dragons",
-            "attendance": "4"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
+            "id": "2569ce0d517a7f06d3ea1f28",
             "createdAt": "27/03/2019",
             "description": "Show off your skills and imporve your techniques at our e-sports comepetition, with a cash prize!!.",
             "logo": ["SportsEsports"],
@@ -41,71 +17,7 @@
             "attendance": "20"
         },
         {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "14/03/2019",
-            "description": "50km ride for Wednesday afternoon sports afternoon.",
-            "logo": ["DirectionsBike"],
-            "title": "Triathlon Club Long Ride",
-            "attendance": "12"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "14/03/2019",
-            "description": "Officers vs. Serniors charity football match.",
-            "logo": ["SportsSoccer"],
-            "title": "Officers vs. Seniors football match",
-            "attendance": "28"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "23/03/2019",
-            "description": "3D printing workshop in the Carver Barracks Makerspace. Run by LCpl Smith",
-            "logo": ["Print"],
-            "title": "Learn how to 3D print",
-            "attendance": "5"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "12/02/2019",
-            "description": "Book of the week is Lord of the Flies",
-            "logo": ["AutoStories"],
-            "title": "Station Book Club",
-            "attendance": "2"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "26/02/2019",
-            "description": "Auditions to join the station choir.",
-            "logo": ["MusicNote"],
-            "title": "Military Choir Auditions",
-            "attendance": "34"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "26/02/2019",
-            "description": "Piano lessons available for all SP on camp.",
-            "logo": ["Piano"],
-            "title": "Piano Lessons",
-            "attendance": "4"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "15/02/2019",
-            "description": "Come and get hands on with drones. First step in becoming a drone pilot",
-            "logo": ["Flight"],
-            "title": "Drone familiarisation training",
-            "attendance": "46"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
-            "createdAt": "28/02/2019",
-            "description": "The Station car club will be running a beginer session on how to service your car.",
-            "logo": ["DirectionsCar"],
-            "title": "Basic Car Maintainence",
-            "attendance": "9"
-        },
-        {
-            "id": "2569ce0d517a7f06d3ea1f24",
+            "id": "2569ce0d517a7f06d3ea1f16",
             "createdAt": "26/02/2019",
             "description": "Sgt Bloom will deliver a Fusion360 training package during the next personal development afternon.",
             "logo": ["Architecture"],
@@ -113,11 +25,105 @@
             "attendance": "7"
         },
         {
-            "id": "2569ce0d517a7f06d3ea1f24",
+            "id": "2569ce0d517a7f06d3ea1f25",
+            "createdAt": "27/03/2019",
+            "description": "Learn to code, from 0 to hero in Python, C#, Java and much much more                           ",
+            "logo": ["Code"],
+            "title": "Programming Event",
+            "attendance": "10"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f16",
+            "createdAt": "28/02/2019",
+            "description": "The Station car club will be running a beginer session on how to service your car.                 ",
+            "logo": ["DirectionsCar"],
+            "title": "Basic Car Maintainence",
+            "attendance": "9"
+        },
+        
+        {
+            "id": "2569ce0d517a7f06d3ea1f27",
+            "createdAt": "27/03/2019",
+            "description": "Geek out with a newly established gaming group for dungeons and dragons.                        ",
+            "logo": ["Casino"],
+            "title": "Dungeons And Dragons",
+            "attendance": "4"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f11",
+            "createdAt": "23/03/2019",
+            "description": "3D printing workshop in the Carver Barracks Makerspace. Run by LCpl Smith                       ",
+            "logo": ["Print"],
+            "title": "Learn how to 3D print",
+            "attendance": "5"
+        },
+        
+       
+        {
+            "id": "2569ce0d517a7f06d3ea1f29",
+            "createdAt": "14/03/2019",
+            "description": "50km ride for Wednesday afternoon sports afternoon.                                            ",
+            "logo": ["DirectionsBike"],
+            "title": "Triathlon Club Long Ride",
+            "attendance": "12"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f10",
+            "createdAt": "14/03/2019",
+            "description": "Officers vs. Serniors charity football match.                                                  ",
+            "logo": ["SportsSoccer"],
+            "title": "Officers vs. Seniors football match",
+            "attendance": "28"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f26",
+            "createdAt": "27/03/2019",
+            "description": "Fly a drone, new commers welcome.                                                               ",
+            "logo": ["Flight"],
+            "title": "Drone Flying",
+            "attendance": "2"
+        },
+       
+        {
+            "id": "2569ce0d517a7f06d3ea1f12",
+            "createdAt": "12/02/2019",
+            "description": "Book of the week is Lord of the Flies                                                          ",
+            "logo": ["AutoStories"],
+            "title": "Station Book Club",
+            "attendance": "2"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f13",
+            "createdAt": "26/02/2019",
+            "description": "Auditions to join the station choir.                                                         ",
+            "logo": ["MusicNote"],
+            "title": "Military Choir Auditions",
+            "attendance": "34"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f14",
+            "createdAt": "26/02/2019",
+            "description": "Piano lessons available for all SP on camp. Everyone Welcome, To Learn And Teach                                                  ",
+            "logo": ["Piano"],
+            "title": "Piano Lessons For Beginners",
+            "attendance": "4"
+        },
+        {
+            "id": "2569ce0d517a7f06d3ea1f15",
+            "createdAt": "15/02/2019",
+            "description": "Come and get hands on with drones. First step in becoming a drone pilot                        ",
+            "logo": ["Flight"],
+            "title": "Drone familiarisation training",
+            "attendance": "46"
+        },
+        
+       
+        {
+            "id": "2569ce0d517a7f06d3ea1f18",
             "createdAt": "24/02/2019",
-            "description": "Sgt Todd will deliver training on how to take good photos with your mobile phone.",
+            "description": "Sgt Todd will deliver training on how to take good photos with your mobile phone.                     ",
             "logo": ["CameraAlt"],
-            "title": "Sub-unit photographer development training",
+            "title": "photographer development",
             "attendance": "3"
         }
     ]

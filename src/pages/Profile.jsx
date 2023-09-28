@@ -80,10 +80,12 @@ export default function BasicGrid() {
         <Grid item xs={12}>
         <Card>
             <h3>Badges Earned</h3>
-            <img src= '/public/assets/badges/ArcheryBadge.png' alt="Archery Badge" height="100" />
-            <img src= '/public/assets/badges/CodingBadge.png' alt="Coding Badge" height="100" />
-            <img src= '/public/assets/badges/DroneBadge.png' alt="Drone Badge" height="100" />
-            <img src= '/public/assets/badges/SkiBadge.png' alt="Ski Badge" height="100" />
+            
+            
+            <img src= '../../public/assets/badges/CodingBadge.png' alt="Coding Badge" height="100" />
+            <img src= '../../public/assets/badges/DroneBadge.png' alt="Drone Badge" height="100" />
+            <img src= '../../public/assets/badges/SkiBadge.png' alt="Ski Badge" height="100" />
+            <img src= '../../public/assets/badges/ArcheryBadge.png' alt="Archery Badge" height="100" />
             
         </Card>
           
