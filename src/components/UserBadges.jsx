@@ -14,6 +14,9 @@ const BadgesPill = (props) => {
 
   let count = 0;
 
+ 
+
+
   userBadgeList.forEach((badge, index) => {
     if (count == 3) {
       return;

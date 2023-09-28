@@ -5,9 +5,9 @@ import { getCountAttributes } from "../api";
 
 const SkillGrid = () => {
   const skills = [
-    { title: 'Pythonsss', description: 'Snake code' },
-    { title: 'JavaScript', description: 'Cool code' },
-    { title: 'Java', description: 'Dork code' },
+    { title: 'Python', description: 'General use programming' },
+    { title: 'Drones', description: 'Flying + Photography' },
+    { title: 'French', description: 'Boulangerie Appreciation' },
   ];
 
   let [isLoading, setIsLoading] = useState(true);

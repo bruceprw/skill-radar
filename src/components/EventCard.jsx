@@ -13,6 +13,10 @@ import Chip from "@mui/material/Chip";
 import CardOverflow from '@mui/joy/CardOverflow';
 import ButtonGroup from '@mui/joy/ButtonGroup';
 import UserBadges from './UserBadges';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import IconButton from '@mui/material/IconButton';
+
 
 
 export default function EventCard(props) {
@@ -50,15 +54,15 @@ export default function EventCard(props) {
           {props.desc}
         </Typography>
       </CardContent> 
+      <CardActions  style={{display:'flex', justifyContent:'space-between', width:'95%' }}>
+        <IconButton aria-label="add to favorites">
+        <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+        <RemoveCircleIcon/>
+        </IconButton>
+      </CardActions>
       
-      <CardOverflow sx={{ bgcolor: 'background.level1' }}>
-        <CardActions buttonFlex="1">
-          <ButtonGroup variant="outlined" sx={{ bgcolor: 'background.surface' }}>
-            <Button>Register intrest</Button>
-            <Button>Remove From Feed</Button>
-          </ButtonGroup>
-        </CardActions>
-      </CardOverflow>
     </Card>
   );
 }

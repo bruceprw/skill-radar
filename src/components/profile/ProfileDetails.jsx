@@ -16,9 +16,9 @@ import {
 } from '@mui/material';
 
 const Permissions = {
-  "1":"Admin",
+  "1":"User",
   "2":"Super User",
-  "3":"User"
+  "3":"Admin"
 }
 
 export default function AccountInformation(props) {
