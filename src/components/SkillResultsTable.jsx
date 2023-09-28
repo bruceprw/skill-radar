@@ -83,7 +83,7 @@ export default function SkillResultsTable({passResults}) {
 };
 const action = (
   <React.Fragment>
-    <Button color="secondary" size="small" onClick={handleClose}>
+    <Button color="success" size="small" onClick={handleClose}>
     </Button>
     <IconButton
       size="small"
@@ -112,6 +112,7 @@ const action = (
       <div>
         { hide && (<Button
                   variant='contained'
+                  color='success'
                   onClick={handleClickOpen}
                   >
         Email tasking chain of selected users
@@ -133,8 +134,8 @@ const action = (
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleSendClose}>Send tasking request</Button>
+          <Button onClick={handleClose} color='success'>Cancel</Button>
+          <Button onClick={handleSendClose} color='success'>Send tasking request</Button>
         </DialogActions>
       </Dialog>
       <Snackbar

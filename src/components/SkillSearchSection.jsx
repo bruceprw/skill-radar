@@ -56,7 +56,7 @@ export const SkillSearchSection = ({setPassResults}) => {
   return (
     <Box>
       <Card sx={{ p: 2 }}>
-        <FormControl sx={{ marginBottom: 3, width: '100%' }}>
+        <FormControl sx={{ marginBottom: 1, width: '100%' }}>
           <Autocomplete
             multiple
             id="Skills"
@@ -82,7 +82,7 @@ export const SkillSearchSection = ({setPassResults}) => {
             )}
           />
         </FormControl>
-        <Button variant="contained" color="primary" onClick={startSearch} sx={{ marginBottom: 3, marginTop: 3 }}>
+        <Button variant="contained" color="success" onClick={startSearch} sx={{ marginBottom: 3, marginTop: 3 }}>
           Start Search
         </Button>
       </Card>

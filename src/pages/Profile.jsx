@@ -37,7 +37,7 @@ export default function BasicGrid() {
   //console.log(ctx)
   return (
     <>
-    <h2>{ctx.firstName}s Profile</h2>
+    <h2>{ctx.firstName} {ctx.lastName} - Profile</h2>
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid container spacing={2} xs={12} md={12}>
@@ -78,7 +78,7 @@ export default function BasicGrid() {
         </Grid>
 
         <Grid item xs={12}>
-        <Card>
+        <Card sx={{padding: '1em'}}>
             <h3>Badges Earned</h3>
             <img src= '/public/assets/badges/ArcheryBadge.png' alt="Archery Badge" height="100" />
             <img src= '/public/assets/badges/CodingBadge.png' alt="Coding Badge" height="100" />
@@ -89,19 +89,19 @@ export default function BasicGrid() {
           
         </Grid>
         <Grid item xs={12}>
-          <Card>
+          <Card sx={{padding: '1em'}}>
             <h3>Skills</h3>
             <ProfileSkills/>
           </Card>
         </Grid>
         <Grid item xs={12}>
-        <Card>
+        <Card sx={{padding: '1em'}}>
             <h3>Qualifications</h3>
             <ProfileQualifications/>
         </Card>          
         </Grid>
         <Grid item xs={12}>
-        <Card>
+        <Card sx={{padding: '1em'}}>
             <h3>Connections</h3>
             <ProfileConnections />
         </Card>          

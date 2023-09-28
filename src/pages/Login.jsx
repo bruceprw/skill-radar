@@ -6,8 +6,8 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import LogoFull from "../assets/logo-full";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import { useNavigate } from "react-router-dom";
 const Login = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -16,7 +16,7 @@ const Login = (props) => {
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const context = createContext()
+  const context = createContext();
   const navigate = useNavigate();
 
   const emailChangeHandler = (event) => {
@@ -49,8 +49,8 @@ const Login = (props) => {
   };
 
   const handleRegister = () => {
-   navigate("/onboarding");
-  }
+    navigate("/onboarding");
+  };
 
   return (
     <Box
@@ -111,9 +111,7 @@ const Login = (props) => {
               }}
               noValidate
               autoComplete="off"
-            >
-
-            </Box>
+            ></Box>
             <div>
               <Box
                 sx={{
@@ -134,6 +132,23 @@ const Login = (props) => {
               </Box>
             </div>
           </form>
+        </Card>
+        <Card sx={{ marginTop: "1em" }}>
+          <Box
+            sx={{padding: '2em', display: 'inline-block'}}
+          >
+            Test Accounts:
+            <br /><br />
+            Basic: <b>James@test.com</b>
+            <br />
+            Admin: <b>Helen@test.com</b>
+            <br />
+            Super: <b>Jeff@test.com</b>
+            <br />
+            <br />
+            Use any 7 character password.
+          
+          </Box>
         </Card>
       </Grid>
     </Box>

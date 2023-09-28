@@ -117,7 +117,8 @@ function App() {
               sm={12}
               md={9}
               sx={{
-                margin: { xs: "0 2em 0 2em", md: "0 auto" },
+                margin: { xs: "0 2em", md: "0 auto" },
+                width: { xs: "80%", md: "100%" },
                 padding: { xs: "unset", md: "0 1em 0 0" },
               }}
             >
