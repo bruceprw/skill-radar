@@ -3,6 +3,7 @@ import useDemoConfig from "./useDemoConfig";
 import React from "react";
 import { Chart } from "react-charts";
 import LoadingLogo from "../assets/loading-logo";
+import Box from "@mui/material/Box";
 
 export default function Bar(props) {
   const isLoading = props.isLoading;
@@ -55,6 +56,24 @@ export default function Bar(props) {
 
   return (
     <>
+      <Box
+        sx={{
+          marginBottom: "1em",
+          width: "auto",
+          display: "flex",
+          alignItems: "center",
+          background: "#f0f4f8",
+          borderRadius: "10px",
+          padding: "1em",
+        }}
+      >
+        <div style={{ display: "flex", alignContent: 'center' }}>
+          <div style={{ display: 'flex', fontSize: "2rem", marginRight: '0.25em' }}>📊</div>
+          <div style={{ display: "inline", alignSelf: 'center' }}>
+            Here is description of this chart
+          </div>
+        </div>
+      </Box>
       <div style={{ width: "100%", height: "400px" }}>
         <Chart
           options={{
