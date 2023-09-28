@@ -28,30 +28,18 @@ export const SkillSearchSection = ({setPassResults}) => {
     
   };
 
-  let [isError, setIsError] = useState(false);
-  let [showTable, setShowTable] = useState(false);
-  let [isLoading, setIsLoading] = useState(true);
-  let [listAttributes, setListAttributes] = useState([]);
-
-  useEffect(() => {
-    getListAttributes()
-      .then((data) => {
-        setListAttributes(data);
-        setTimeout(function () {
-          setIsLoading(false);
-          setShowTable(true)
-        }, 1500);
-      })
-      .catch((error) => {
-        setIsError(true);
-        setShowTable(false)
-        setIsLoading(false);
-      });
-  }, []);
-
-  const skills = listAttributes.map(item => {
-    return item.name
-})
+  const skills = [
+                    "Python Programming",
+                    "Motor Biking",
+                    "C++ Programming",
+                    "French Language",
+                    "Spanish Language",
+                    "First Aider",
+                    "Drone Pilot",
+                    "Chef",
+                    "Power BI",
+                    "Figma"
+                  ];
 
   return (
     <Box>
