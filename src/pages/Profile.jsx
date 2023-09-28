@@ -3,7 +3,12 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ProfileDetails from '../components/profile/ProfileDetails'
+import ProfileSkills from '../components/profile/ProfileSkills'
+import ProfileConnections from '../components/profile/ProfileConnections'
+import ProfileQualifications from '../components/profile/ProfileQualifications'
+//import ProfileBadges from '../components/profile/ProfileBadges'
 import AuthContext from "../store/auth-context";
+
 
 
 import {
@@ -74,29 +79,43 @@ export default function BasicGrid() {
 
         <Grid item xs={12}>
         <Card>
-            <h3>Interests</h3>
-              Motor Biking, C++
-            </Card>
+            <h3>Badges Earned</h3>
+            <img src= '/public/assets/badges/ArcheryBadge.png' alt="Archery Badge" height="100" />
+            <img src= '/public/assets/badges/CodingBadge.png' alt="Coding Badge" height="100" />
+            <img src= '/public/assets/badges/DroneBadge.png' alt="Drone Badge" height="100" />
+            <img src= '/public/assets/badges/SkiBadge.png' alt="Ski Badge" height="100" />
+            
+        </Card>
           
         </Grid>
         <Grid item xs={12}>
           <Card>
             <h3>Skills</h3>
-              Poached Eggs
+            <ProfileSkills/>
           </Card>
         </Grid>
         <Grid item xs={12}>
         <Card>
             <h3>Qualifications</h3>
-            BSc Computer Science
+            <ProfileQualifications/>
         </Card>          
         </Grid>
         <Grid item xs={12}>
         <Card>
             <h3>Connections</h3>
+            <ProfileConnections />
         </Card>          
         </Grid>
          
+      </Grid>
+      <Grid item xs={12}>
+      <Box 
+      sx={{
+        width: 100,
+        height: 100}}>
+            <h3></h3>
+            
+        </Box>      
       </Grid>
       </Box>
   </>

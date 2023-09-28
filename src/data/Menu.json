@@ -3,17 +3,17 @@
         {
             "to": "/",
             "text": "Dashboard",
-            "icon": "DashboardIcon"
+            "icon": "Dashboard"
           },
           {
             "to": "/community",
             "text": "Community Hub",
-            "icon": "ForumIcon"
+            "icon": "Forum"
           },
           {
             "to": "/people",
             "text": "People",
-            "icon": "GroupsIcon"
+            "icon": "Group"
           }
     ]
 }

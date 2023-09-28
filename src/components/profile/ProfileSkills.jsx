@@ -29,7 +29,8 @@ export default function AccountSkills(props) {
         <Typography
           gutterBottom
           variant="h5"
-        >         
+        >        
+        Python, C#, HTML, Skiing
         </Typography>
       </Box>  
   );

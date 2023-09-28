@@ -30,6 +30,7 @@ export default function AccountQualifications(props) {
           gutterBottom
           variant="h5"
         >         
+        Level 3 BTEC Communications, A-Level Computer Science
         </Typography>
       </Box>  
   );
