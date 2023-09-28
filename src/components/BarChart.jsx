@@ -70,7 +70,7 @@ export default function Bar(props) {
         <div style={{ display: "flex", alignContent: 'center' }}>
           <div style={{ display: 'flex', fontSize: "2rem", marginRight: '0.25em' }}>📊</div>
           <div style={{ display: "inline", alignSelf: 'center' }}>
-            Here is description of this chart
+            This graph displays a count of people with the selected skills
           </div>
         </div>
       </Box>
