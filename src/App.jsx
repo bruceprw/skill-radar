@@ -124,6 +124,13 @@ function App() {
               <Box sx={{ height: { xs: "100vh" } }}>
                 <MainContent />
                 <Box
+                  sx={{
+                    height: '60px'
+                  }}
+                >
+                  &nbsp;
+                </Box>
+                <Box
                   id="footer"
                   className="secondary"
                   sx={{

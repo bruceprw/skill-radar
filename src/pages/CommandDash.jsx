@@ -51,8 +51,6 @@ const CommandDash = () => {
       });
   }, []);
 
-  console.log(countMentorStatus)
-
   return (
     <>
     {userType == 3 && (
