@@ -78,15 +78,10 @@ export default function BasicGrid() {
         </Grid>
 
         <Grid item xs={12}>
-        <Card sx={{padding: '1em'}}>
-            <h3>Badges Earned</h3>
-            
-            
-            <img src= '../../public/assets/badges/CodingBadge.png' alt="Coding Badge" height="100" />
-            <img src= '../../public/assets/badges/DroneBadge.png' alt="Drone Badge" height="100" />
-            <img src= '../../public/assets/badges/SkiBadge.png' alt="Ski Badge" height="100" />
-            <img src= '../../public/assets/badges/ArcheryBadge.png' alt="Archery Badge" height="100" />
-            
+        <Card>
+            <h3>Badges Earned</h3> 
+            <p>You Currently Dont Hold Any Badges!</p>
+           
         </Card>
           
         </Grid>
