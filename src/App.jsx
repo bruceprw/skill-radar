@@ -35,22 +35,28 @@ function App() {
     let fname = null;
     let lname = null;
 
+    if (email.toLowerCase() == "james@test.com") {
+      userType = 1;
+      fname = 'James';
+      lname = 'Rifleman';
+    }
+
+    if (email.toLowerCase() == "helen@test.com") {
+      userType = 2;
+      fname = 'Helen';
+      lname = 'Major';
+    }
+
+    if (email.toLowerCase() == "jeff@test.com") {
+      userType = 3;
+      fname = 'Jeff';
+      lname = 'Admiral';
+    }
+
     if (email.toLowerCase() == "luke@test.com") {
       userType = 1;
       fname = 'Luke';
       lname = 'Dale';
-    }
-
-    if (email.toLowerCase() == "jake@test.com") {
-      userType = 2;
-      fname = 'Jake';
-      lname = 'Sexton';
-    }
-
-    if (email.toLowerCase() == "ben@test.com") {
-      userType = 3;
-      fname = 'Ben';
-      lname = 'Turner';
     }
 
     localStorage.setItem("userType", userType);
@@ -118,6 +124,13 @@ function App() {
               <Box sx={{ height: { xs: "100vh" } }}>
                 <MainContent />
                 <Box
+                  sx={{
+                    height: '60px'
+                  }}
+                >
+                  &nbsp;
+                </Box>
+                <Box
                   id="footer"
                   className="secondary"
                   sx={{
@@ -129,7 +142,7 @@ function App() {
                     padding: "0.5em",
                   }}
                 >
-                  © 2023 - Hackathon 22 | Team 9
+                  © 2023 - Hackathon 23 | Team 9
                 </Box>
               </Box>
             </Grid>

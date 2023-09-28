@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MagnifyingGlassIcon from '@heroicons/react/24/solid/MagnifyingGlassIcon';
 import { Box, Card, InputAdornment, OutlinedInput, SvgIcon, Button, FormControl, Select, MenuItem, Checkbox, ListItemText, Input, InputLabel, Chip, Autocomplete, TextField } from '@mui/material';
 import {useNavigate} from 'react-router-dom';
-import { getListUsersByAttributes } from '../api';
+import { getListUsersByAttributes, getListAttributes } from '../api';
 export const SkillSearchSection = ({setPassResults}) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [selectedIndexes, setSelectedIndexes] = useState([])
@@ -28,18 +28,30 @@ export const SkillSearchSection = ({setPassResults}) => {
     
   };
 
-  const skills = [
-                    "Python Programming",
-                    "Motor Biking",
-                    "C++ Programming",
-                    "French Language",
-                    "Spanish Language",
-                    "First Aider",
-                    "Physiotherapist",
-                    "Chef",
-                    "Power BI",
-                    "Figma"
-                  ];
+  let [isError, setIsError] = useState(false);
+  let [showTable, setShowTable] = useState(false);
+  let [isLoading, setIsLoading] = useState(true);
+  let [listAttributes, setListAttributes] = useState([]);
+
+  useEffect(() => {
+    getListAttributes()
+      .then((data) => {
+        setListAttributes(data);
+        setTimeout(function () {
+          setIsLoading(false);
+          setShowTable(true)
+        }, 1500);
+      })
+      .catch((error) => {
+        setIsError(true);
+        setShowTable(false)
+        setIsLoading(false);
+      });
+  }, []);
+
+  const skills = listAttributes.map(item => {
+    return item.name
+})
 
   return (
     <Box>
