@@ -17,9 +17,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import IconButton from '@mui/material/IconButton';
 
-
-
 export default function EventCard(props) {
+
+  console.log(props);
   
   return(
     <Card
@@ -46,7 +46,7 @@ export default function EventCard(props) {
         >
           {props.title}
         </Typography>
-        <Divider component="li" variant="inset" />
+        <br />
         <Typography
           align="center"
           variant="body1"
