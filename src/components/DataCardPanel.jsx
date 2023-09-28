@@ -8,19 +8,19 @@ const DataCardPanel = (props) => {
   return (
     <Grid container xs={12} spacing={2}>
       {dataArray.map((item) => {
-        let chartTitle = "Uninterested";
-        let chartDescription = "Uninterest Desc";
+        let chartTitle = "Qualified";
+        let chartDescription = "Count of qualified skills within the organisation";
         let chartClass = "danger";
 
         if (item.mentorstatus == 1) {
           chartTitle = "Interested";
-          chartDescription = "Interested Desc";
+          chartDescription = "Count of users showing an interest in a skill";
           chartClass = "primary";
         }
 
         if (item.mentorstatus == 2) {
           chartTitle = "Mentors";
-          chartDescription = "Mentors Desc";
+          chartDescription = "Count of users offering mentoring in a selected skill";
           chartClass = "success";
         }
 
