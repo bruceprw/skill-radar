@@ -35,7 +35,7 @@ export const SkillSearchSection = ({setPassResults}) => {
                     "French Language",
                     "Spanish Language",
                     "First Aider",
-                    "Physiotherapist",
+                    "Drone Pilot",
                     "Chef",
                     "Power BI",
                     "Figma"

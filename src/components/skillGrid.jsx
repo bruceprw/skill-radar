@@ -3,9 +3,9 @@ import SkillCard from "./skillCard.jsx";
 
 const SkillGrid = () => {
   const skills = [
-    { title: 'Python', description: 'Snake code' },
-    { title: 'JavaScript', description: 'Cool code' },
-    { title: 'Java', description: 'Dork code' },
+    { title: 'Python', description: 'General use programming' },
+    { title: 'Drones', description: 'Flying + Photography' },
+    { title: 'French', description: 'Boulangerie Appreciation' },
   ];
 
   return (
