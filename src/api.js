@@ -1,5 +1,5 @@
 const apiUrl =
-  "https://xgi2osoer8.execute-api.eu-west-2.amazonaws.com/team9test";
+  "https://p6e9dul3ni.execute-api.eu-west-2.amazonaws.com/prod";
 
 export const getListUsers = async () => {
     const dataSet = await fetch(`${apiUrl}/listUsers`);
