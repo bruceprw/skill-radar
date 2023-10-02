@@ -1,8 +1,7 @@
-# React + Vite
+# Skill Radar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This product was developed over 48hrs for the Ministry of Defence Hackathon 2023. 
 
-Currently, two official plugins are available:
+Skill Radar enables individuals within Defence to connect with others with similar skills and interests, and allows commanders to identify individuals with specific skill sets, as well as view analytics for skills across their organisation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+View the demo here: https://master.d2ohk5gnmkcm6h.amplifyapp.com/
